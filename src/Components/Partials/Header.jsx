@@ -1,16 +1,19 @@
 import { Nav } from "./Nav"
-
-const navItems = [
-	{ name: 'Forside', path: '/' }
-]
+import logo from '../../Assets/Image/Logo.png';
+import { SearchBar } from "../Search/Search";
+import './Header.scss';
+import { BurgerMenu } from "./BurgerMenu";
 
 export const Header = () => {
 
 	return (
-		<div>
-			<header>
-				<Nav navItems={navItems} />
-			</header>
-		</div>
+		<header>
+			<SearchBar />
+			<div className="logoWrapper">
+				<img src={logo} alt="logo" />
+			</div>
+			<Nav />
+			<BurgerMenu />
+		</header>
 	)
 }

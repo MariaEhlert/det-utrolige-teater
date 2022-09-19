@@ -1,16 +1,13 @@
 import { NavLink } from 'react-router-dom'
 
-export const Nav = props => {
+export const Nav = () => {
 	return (
 		<nav>
-			<ul>
-				{props && props.navItems && props.navItems.map((value, index) => {
-					return (
-						<li key={index}>
-							<NavLink to={value.path}>{value.name}</NavLink>
-						</li>
-					)
-				})}
+			<ul className='topNav'>
+				<li><NavLink to='/'>FORSIDE</NavLink></li>
+				<li><NavLink to='/performencesAndEvnets'>FORESTILLINGER &#38; EVENTS</NavLink></li>
+				<li><NavLink to='/actors'>SKUESPILLERE</NavLink></li>
+				<li><NavLink to='/login'>LOGIN</NavLink></li>
 			</ul>
 		</nav>
 	)

@@ -1,0 +1,64 @@
+header{
+    height: 10vh;
+    padding-top: 2%;
+    font-family: 'Titillium Web', sans-serif;
+
+
+    .searchWrapper{
+        margin-left: 80%;
+        margin-bottom: -3%;
+        form{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            display: flex;
+            justify-content: end;
+            border-bottom: 1px solid #707070;
+            input[type=text]{
+                width: 100%;
+                padding: 2%;
+                border: none;
+            }
+            button{
+                width: 20%;
+                background: none;
+                border: none;
+                padding: 2%;
+            }
+            svg{
+                color: #707070;
+                
+            }
+        }
+        @media (width < 1199px) {
+            display: none;
+        } 
+
+    }
+    .logoWrapper{
+        img{
+            
+        }
+    }
+    nav{
+        .topNav{
+            margin-left: 20%;
+            margin-top: -3%;
+            @media (width < 1199px) {
+                display: none;
+            }  
+            text-align: end;
+            li{
+                display: inline-block;
+                padding-left: 5%;
+                a{
+                    font-size: 1.3vw;
+                    color: #707070;
+                    &:hover{
+                        color: #D39D5B;
+                    }
+                }
+            }
+        }
+    }
+}
