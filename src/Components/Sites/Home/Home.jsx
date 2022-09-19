@@ -1,10 +1,13 @@
 import { Layout } from "../../Helpers/Layout/Layout"
+import { Hero } from "./Hero";
+import './Home.scss';
+
+// https://api.mediehuset.net/detutroligeteater/events?limit=3
 
 export const Home = () => {
     return(
         <Layout title='Forside' description='forside'>
-            <h1>Home</h1>
-            <p>her kommer mine props children</p>
+            <Hero/>
         </Layout>
     )
 }

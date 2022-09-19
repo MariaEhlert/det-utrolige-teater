@@ -15,15 +15,41 @@ body{
     padding-left: 15%;
     padding-right: 15%;
     padding-top: 2%;
+    font-family: 'Titillium Web', sans-serif;
     main{
-        padding-top: 10%;
-        font-family: 'Playfair Display', serif;
+        padding-top: 7%;
+        color: #707070;
+        h1{
+            
+        }
+        h2{
+            font-family: 'Playfair Display', serif;
+            color: #D39D5B;
+            font-size: 3vw;
+            font-weight: 100;
+        }
+        h3{
+            font-weight: 400;
+            font-size: 1.8vw;
+
+        }
+        h6{
+            font-weight: 900;
+            font-size: 1vw;
+            font-size: 1.2vw;
+        }
+        p{
+            font-size: 1.2vw;
+        }
     }
 }
 @mixin coloredThinBorder {
     border: 0.5px solid #D39D5B;  
 }
 @mixin coloredBigBorder {
-    border: 0.5px solid #D39D5B;  
+    border: 10px solid #D39D5B;  
+}
+@mixin sectionPadding {
+ padding-bottom: 6%;   
 }
 
