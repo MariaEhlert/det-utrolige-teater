@@ -1,32 +1,24 @@
-@import '../../../App.scss';
+@import '../../App.scss';
 .heroWrapper{
     @include sectionPadding;
     figure{
         display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 6%;
-        // hero billede driller
-        padding-right: 2%;
-
+        grid-template-columns: 30% 70%;
+        // gap: 1rem;
             img{
                 @include coloredBigBorder;
-                width: 100%;
+                width: 96%;
                 height: 40vh
             }
         figcaption{
-            width: 100%;
+            width: 80%;
             @include coloredThinBorder;
             text-align: end;
             padding: 10%;
             padding-top: 50%;
-            h2{
-
-            }
-            h3{
-
-            }
-            p{
-
+            hr{
+                opacity: 0.3;
+                margin-left: 4rem;
             }
         }
     }

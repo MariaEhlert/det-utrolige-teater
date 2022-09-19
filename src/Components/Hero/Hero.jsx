@@ -13,7 +13,6 @@ export const Hero = () => {
                 const result = await axios.get('https://api.mediehuset.net/detutroligeteater/events/5');
                 if (result.data) {
                     setHeroData(result.data.item);
-                    console.log(result.data);
                 }
             } catch (error) {
                 console.log(error);

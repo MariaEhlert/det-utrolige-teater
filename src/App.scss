@@ -12,10 +12,10 @@
     text-decoration: none;
 }
 body{
-    padding-left: 15%;
-    padding-right: 15%;
     padding-top: 2%;
     font-family: 'Titillium Web', sans-serif;
+    padding-left: 15%;
+    padding-right: 15%;
     main{
         padding-top: 7%;
         color: #707070;
@@ -47,9 +47,26 @@ body{
     border: 0.5px solid #D39D5B;  
 }
 @mixin coloredBigBorder {
-    border: 10px solid #D39D5B;  
+    background-color: #D39D5B;
+    padding: 1rem;
 }
 @mixin sectionPadding {
  padding-bottom: 6%;   
+}
+@mixin orangeBtn {
+    background-color: #D39D5B;
+    color: #FFFFFF;
+    border: none;
+    padding: 4%;
+    font-size: 1vw;
+    font-weight: 700;
+}
+@mixin dackBlueBtn {
+    background-color: #30454C;
+    color: #FFFFFF;
+    border: none;
+    padding: 4%;
+    font-size: 1vw;
+    font-weight: 700;
 }
 
