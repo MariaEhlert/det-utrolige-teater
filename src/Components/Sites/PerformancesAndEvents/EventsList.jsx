@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Layout } from "../../Helpers/Layout/Layout"
 import { Hero } from "../../Hero/Hero"
-import { EventItem } from "./EventItem";
+import { EventItem } from "../../Events/EventItem";
 import './EventList.scss';
 
 export const EventsList = () => {

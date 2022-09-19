@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import './ThreeRandom.scss';
-import { EventItem } from "../Sites/PerformancesAndEvents/EventItem";
+import { EventItem } from "../Events/EventItem";
 import { useParams } from "react-router-dom";
 
 export const ThreeRandom = () => {
