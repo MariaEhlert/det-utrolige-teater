@@ -1,0 +1,10 @@
+@import '../../../App.scss';
+.seeAllBtn{
+    text-align: end;
+    @include sectionPadding;
+    color: #FFFFFF;
+    button{
+        @include orangeBtn;
+        padding: 2%;
+    }
+}

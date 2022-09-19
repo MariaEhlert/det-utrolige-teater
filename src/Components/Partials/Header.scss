@@ -51,6 +51,9 @@ header{
                 a{
                     font-size: 1.3vw;
                     color: #707070;
+                    &.active {
+                        color: #D39D5B;
+                    }
                     &:hover{
                         color: #D39D5B;
                     }

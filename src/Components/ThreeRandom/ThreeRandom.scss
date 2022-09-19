@@ -1,43 +1,49 @@
 @import '../../App.scss';
-.ThreeRandomWrapper{
+
+.threeRandomWrapper {
     @include sectionPadding;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2%;
-    // gap: 1rem
-}
-.eventsWrapper{
-    // width: 100%;
-    figure{
-        img{
-            @include coloredBigBorder;
-            width: 90%;
-            height: 40vh
-        }
-        figcaption{
-            @include coloredThinBorder;
-            padding: 1rem 2rem 0 3rem;
-            margin-top: -2%;
-            text-align: end;
-            line-height: 1.5;
-            // margin-left: 10%;
-            h3{
-                padding-bottom: 3%
+
+    .eventsWrapper {
+        figure {
+            img {
+                @include coloredBigBorder;
+                width: 90%;
+                height: 40vh
             }
-            h6{
-                padding-bottom: 2%;
-            }
-            hr{
-                opacity: 0.3;
-            }
-            .btnWrapper{
-                padding-bottom: 5%;
-                .readMore{
-                    @include orangeBtn;
-                    margin-right: 3%;
+
+            figcaption {
+                @include coloredThinBorder;
+                padding: 1rem 2rem 0 3rem;
+                margin-top: -2%;
+                text-align: end;
+                line-height: 1.5;
+
+                h3 {
+                    padding-bottom: 3%
                 }
-                .buyTicket{
-                    @include dackBlueBtn;
+
+                h6 {
+                    padding-bottom: 2%;
+                }
+
+                hr {
+                    opacity: 0.3;
+                }
+
+                .btnWrapper {
+                    padding-bottom: 5%;
+
+                    .readMore {
+                        @include dackBlueBtn;
+                        margin-right: 3%;
+                    }
+                    
+                    .buyTicket {
+                        @include orangeBtn;
+                    }
                 }
             }
         }

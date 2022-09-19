@@ -1,0 +1,74 @@
+@import '../../../App.scss';
+.eventListWrapper{
+    .headline{
+        text-align: end;
+        padding-bottom: 4%;
+        margin-top: -2%;
+    }
+    .eventsWrapper {
+        @include coloredThinBorder;
+        margin-bottom: 2%;
+        figure {
+            display: grid;
+            grid-template-columns: 15% 85%;
+            .imageWrapper{
+                img {
+                    @include coloredBigBorder;
+                    padding: 0.3rem;
+                    width: 100%;
+                    height: 92%;
+                }
+            }
+
+            figcaption {
+                margin-left: 2%;
+                display: grid;
+                grid-template-areas: "infoWrapper placeWrapper btnWrapper";
+                gap: 2%;
+                .placeWrapper{
+                    grid-area: placeWrapper;
+                    min-width: 25vw;
+                    max-width: 25vw;
+                    padding-top: 8%;
+                    padding-left: 3%;
+                    hr{
+                        display: none;
+                    }
+
+                }
+                .infoWrapper{
+                    grid-area: infoWrapper;
+                    min-width: 12vw;
+                    max-width: 5vw;
+                    padding-top: 10%;
+                    h2{
+                        font-size: 2vw;
+                        padding-left: 1rem;
+                    }
+
+                    h3{
+                        display: none;
+                    }
+                }
+                .btnWrapper {
+                    grid-area: btnWrapper;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    min-width: 17vw;
+                    max-width: 17vw;
+                    margin-top: 7%;
+                    padding-top: 8%;
+                    .readMore {
+                        @include dackBlueBtn;
+                        padding: 1rem;
+                    }
+                    
+                    .buyTicket {
+                        @include orangeBtn;
+                        padding: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
