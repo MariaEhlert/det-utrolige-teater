@@ -1,0 +1,35 @@
+footer{
+    background-color: #30454C;
+    color: #FFFFFF;
+    font-family: 'Titillium Web', sans-serif;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 5%;
+    .infoWrapper{
+        padding-right: 10%;
+        display: grid;
+        grid-template-columns: 2fr 3fr 1fr;
+        gap: 5%;
+        article{
+            line-height: 1.5;
+            h4{
+                padding-bottom: 3%;
+                font-size: 1.3vw;
+            }
+            p{
+                font-size: 1.1vw;
+            }
+            
+            a{
+                font-size: 1.1vw;
+                color: #FFFFFF;
+            }
+        }
+    }
+    .mediaWrapper{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10%;
+        padding-left: 20%;
+    }
+}
