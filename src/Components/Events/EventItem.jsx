@@ -22,7 +22,7 @@ export const EventItem = props => {
                         <h3>{props.data.genre}</h3>
                     </div>
                     <div className='btnWrapper'>
-                        <Link to={''}><button className='readMore'>LÆS MERE</button></Link>
+                        <Link to={`/events/${props.data.id}`}><button className='readMore'>LÆS MERE</button></Link>
                         <Link to={''}><button className='buyTicket'>KØB BILLET</button></Link>
                     </div>
                 </figcaption>

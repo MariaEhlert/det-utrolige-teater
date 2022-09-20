@@ -1,0 +1,76 @@
+@import '../../App.scss';
+.detailsWrapper{
+    @include coloredThinBorder;
+    figure{
+        .imageWrapper{
+            position: relative;
+            .likeWrapper{
+                position: absolute;
+                right: 5%;
+                top: 5%;
+                img{
+                    
+                }
+            }
+            .eventImage{
+                @include coloredBigBorder;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        figcaption{
+            padding: 2%;
+            .infoheadWrapper{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                .place{
+                    margin-left: 1%;
+                }
+                .price{
+                    margin-right: 1%;
+                }
+            }
+            h6{
+                margin-left: 5px
+            }
+            hr{}
+            h2{}
+            h3{}
+            .buyTicket{
+                text-align: end;
+                margin-top: -4.5rem;
+                padding-bottom: 4%;
+                button{
+                    @include orangeBtn;
+                    padding: 2%;
+                }
+            }
+            .descriptionWrapper{
+                p{
+                    color: #D39D5B;
+                    padding-bottom: 2%;
+                }
+            }
+        }
+    }
+    .actorsWrapper{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        padding: 2%;
+        gap: 1%;
+        figure{
+            @include coloredThinBorder;
+            margin-bottom: 2%;
+            img{
+                width: 100%;
+            }
+            figcaption{
+                p{
+                    text-align: center;
+                    color: #D39D5B;
+                }
+            }
+        }
+    }
+}

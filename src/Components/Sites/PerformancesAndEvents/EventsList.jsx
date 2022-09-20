@@ -22,7 +22,6 @@ export const EventsList = () => {
         }
         getEventList();
     }, [])
-    // 
     return(
         <Layout title='Forestillinger &#38; Events' description='Forestillinger &#38; Events'>
             <Hero/>

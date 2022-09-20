@@ -4,7 +4,6 @@ import { Hero } from "../../Hero/Hero";
 import { ThreeRandom } from "../../ThreeRandom/ThreeRandom";
 import styles from './Home.module.scss';
 
-// https://api.mediehuset.net/detutroligeteater/events?limit=3
 
 export const Home = () => {
     return(

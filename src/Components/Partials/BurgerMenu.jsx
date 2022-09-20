@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import './BurgerMenu.scss'
 
 export const BurgerMenu = () => {
@@ -16,10 +16,10 @@ export const BurgerMenu = () => {
                 <div className="burgerMenuLine"></div>
             </div>
             <ul className={isActive ? 'activeMenu' : 'menu'}>
-                <li><Link className="navigationLinks" to='/' onClick={handleToggle}>FORSIDE</Link></li>
-                <li><Link className="navigationLinks" to='/events' onClick={handleToggle}>FORESTILLINGER &#38; EVENTS</Link></li>
-                <li><Link className="navigationLinks" to='/actors' onClick={handleToggle}>SKUESPILLERE</Link></li>
-                <li><Link className="navigationLinks" to='/login' onClick={handleToggle}>LOGIN</Link></li>
+                <li><NavLink className="navigationLinks" to='/' onClick={handleToggle}>FORSIDE</NavLink></li>
+                <li><NavLink className="navigationLinks" to='/events' onClick={handleToggle}>FORESTILLINGER &#38; EVENTS</NavLink></li>
+                <li><NavLink className="navigationLinks" to='/actors' onClick={handleToggle}>SKUESPILLERE</NavLink></li>
+                <li><NavLink className="navigationLinks" to='/login' onClick={handleToggle}>LOGIN</NavLink></li>
             </ul>
         </>
     )

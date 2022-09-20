@@ -12,7 +12,9 @@ export const Header = () => {
 			<div className="logoWrapper">
 				<img src={logo} alt="logo" />
 			</div>
-			<Nav />
+			<nav className='topNav'>
+				<Nav />
+			</nav>
 			<BurgerMenu />
 		</header>
 	)

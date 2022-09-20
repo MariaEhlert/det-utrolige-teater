@@ -33,18 +33,14 @@ header{
         } 
 
     }
-    .logoWrapper{
-        img{
-            
+    .topNav {
+        margin-left: 20%;
+        margin-top: -3%;
+    
+        @media (width < 1199px) {
+            display: none;
         }
-    }
-    nav{
-        .topNav{
-            margin-left: 20%;
-            margin-top: -3%;
-            @media (width < 1199px) {
-                display: none;
-            }  
+        ul{
             text-align: end;
             li{
                 display: inline-block;
@@ -56,11 +52,11 @@ header{
                     &:hover{
                         color: #D39D5B;
                     }
+                    &.active{
+                        color: #D39D5B;
+                    }
                 }
             }
         }
     }
 }
-// a.active{
-//     color: #D39D5B;
-// }
