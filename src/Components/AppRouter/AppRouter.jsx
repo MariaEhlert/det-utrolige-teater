@@ -6,6 +6,7 @@ import { NoPage } from '../Sites/NoPage/NoPage'
 import { EventDetails } from "../Events/EventDetails"
 import { EventsList } from "../Sites/PerformancesAndEvents/EventsList"
 import { ActorsDetails } from "../Sites/Actors/ActorsDetails"
+import { SearchResult } from "../Search/SearchResult"
 
 export const AppRouter = () => {
   return (
@@ -20,6 +21,7 @@ export const AppRouter = () => {
         <Route path=":actor_id" element={<ActorsDetails/>}/>
       </Route>
       <Route path="/login" element={<Login/>}/>
+      <Route path="/search" element={<SearchResult/>}/>
       <Route path="*" element={<NoPage />} />
     </Routes>
   )
