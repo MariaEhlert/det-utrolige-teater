@@ -12,7 +12,11 @@
                     background-color: transparent;
                     border: none;
                     cursor: pointer;
-                }
+                        svg{
+                            color: #D39D5B;
+                            font-size: 2rem;
+                        }
+                    }
             }
             .eventImage{
                 @include coloredBigBorder;

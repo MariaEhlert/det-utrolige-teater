@@ -58,7 +58,6 @@ export const EventComment = () => {
                                 <p>Du skal være logget ind for at skrive en anmeldelse</p>
                             </div>
                         </article>
-                        {/* <CommentLogin /> */}
                         <CommentLogin />
                     </>
                 ) :

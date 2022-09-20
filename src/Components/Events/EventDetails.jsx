@@ -5,6 +5,7 @@ import { Link, useParams } from "react-router-dom";
 import { Layout } from "../Helpers/Layout/Layout"
 import style from './EventDetails.module.scss';
 import { EventComment } from "../EventsComment/EventComment";
+import { Like } from "../Like/Like";
 export const EventDetails = () => {
     const { event_id } = useParams();
     const [eventDetails, setEventDetails] = useState();
@@ -38,9 +39,8 @@ export const EventDetails = () => {
                     <figure>
                         <article className={style.imageWrapper}>
                             <div className={style.likeWrapper}>
-                                <button><img src={require('../../Assets/Image/Like-icon.png')} alt='like-icon' /></button>
+                                <Like event_id={eventDetails.id}/>
                             </div>
-                            {/* {check ? (<img src={require('../../Assets/Image/Like-icon-toggle.png')} alt='like-icon' />) : (<img src={require('../../Assets/Image/Like-icon.png')} alt='like-icon' />)} */}
                             <div className={style.eventImage}>
                                 <img src={eventDetails.image_medium} alt={eventDetails.title} />
                             </div>
