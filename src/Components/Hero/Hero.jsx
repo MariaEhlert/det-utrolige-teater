@@ -36,7 +36,7 @@ export const Hero = () => {
                         <h2>{heroData.title}</h2>
                         <h3>{heroData.genre}</h3>
                     </figcaption>
-                    <img src={heroData.image} alt={heroData.title} />
+                    <img src={heroData.image_medium} alt={heroData.title} />
                 </figure>
             ) : (<>..Loading</>)}
         </article>

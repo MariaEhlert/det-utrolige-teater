@@ -42,7 +42,7 @@ export const EventDetails = () => {
                             </div>
                             {/* {check ? (<img src={require('../../Assets/Image/Like-icon-toggle.png')} alt='like-icon' />) : (<img src={require('../../Assets/Image/Like-icon.png')} alt='like-icon' />)} */}
                             <div className={style.eventImage}>
-                                <img src={eventDetails.image} alt={eventDetails.title} />
+                                <img src={eventDetails.image_medium} alt={eventDetails.title} />
                             </div>
                         </article>
                         <figcaption>

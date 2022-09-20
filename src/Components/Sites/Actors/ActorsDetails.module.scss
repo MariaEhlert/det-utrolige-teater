@@ -1,0 +1,29 @@
+@import '../../../App.scss';
+.actorDetailsWrapper{
+    article{
+        @include coloredThinBorder;
+        h1{
+            padding: 2%;
+        }
+        figure{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            padding: 2%;
+
+            gap: 3%;
+            figcaption{
+                p{
+                    color: #D39D5B;
+                }
+            }
+        }
+    }
+    div{
+        text-align: end;
+        padding: 2% 0% 2% 0%;
+        button{
+            @include orangeBtn;
+            padding: 2%;
+        }
+    }
+}

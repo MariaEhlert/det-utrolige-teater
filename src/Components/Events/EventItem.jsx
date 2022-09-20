@@ -9,7 +9,7 @@ export const EventItem = props => {
         <article className='eventsWrapper'>
             <figure>
                 <div className='imageWrapper'>
-                    <img src={props.data.image} alt={props.data.title} />
+                    <img src={props.data.image_small} alt={props.data.title} />
                 </div>
                 <figcaption>
                     <div className='placeWrapper'>
