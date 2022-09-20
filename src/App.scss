@@ -42,6 +42,9 @@ body{
         p{
             font-size: 1.2vw;
         }
+        hr{
+            opacity: 0.5;
+        }
     }
 }
 @mixin coloredThinBorder {

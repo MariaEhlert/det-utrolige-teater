@@ -1,0 +1,65 @@
+@import '../../App.scss';
+
+section {
+    form {
+        margin-top: -1%;
+        padding: 3%;
+        p{
+            color: rgb(213, 20, 20);
+        }
+
+        .ratingElement {
+            display: grid;
+            grid-template-columns: 13% 87%;
+
+            h6 {
+                color: #FFFFFF;
+                font-weight: 400;
+                margin-left: 1%;
+                font-size: 1.4vw;
+            }
+
+            .ratingInput {
+                margin-left: 1%;
+
+                input[type="radio"] {
+                    display: none;
+                }
+
+                .numStar {
+                    cursor: pointer;
+                    font-size: 2vw;
+                    color: #FFFFFF;
+                }
+            }
+        }
+
+        .formElement {
+
+            input[type=text],
+            textarea {
+                width: 80%;
+                padding: 0.5rem;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            textarea {
+                height: 10vh;
+                position: relative;
+                margin-top: 1%;
+            }
+
+            button {
+                position: absolute;
+                @include orangeBtn;
+                padding: 1% 2%;
+                border-radius: 8px;
+                margin-left: 1%;
+                margin-top: 4.5%;
+            }
+        }
+
+
+    }
+}

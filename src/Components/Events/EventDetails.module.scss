@@ -8,8 +8,10 @@
                 position: absolute;
                 right: 5%;
                 top: 5%;
-                img{
-                    
+                button{
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
                 }
             }
             .eventImage{
@@ -24,6 +26,7 @@
             .infoheadWrapper{
                 display: grid;
                 grid-template-columns: 1fr 1fr;
+                padding-bottom: 1%;
                 .place{
                     margin-left: 1%;
                 }
@@ -34,9 +37,7 @@
             h6{
                 margin-left: 5px
             }
-            hr{}
-            h2{}
-            h3{}
+             
             .buyTicket{
                 text-align: end;
                 margin-top: -4.5rem;
@@ -54,11 +55,16 @@
             }
         }
     }
+    .actorsHeading{
+        padding-left: 2%;
+
+    }
     .actorsWrapper{
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         padding: 2%;
         gap: 1%;
+        border-bottom: 1px dashed #D39D5B;
         figure{
             @include coloredThinBorder;
             margin-bottom: 2%;

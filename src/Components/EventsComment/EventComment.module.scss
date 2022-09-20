@@ -1,0 +1,57 @@
+.commentWrapper {
+    padding: 2%;
+    article{
+        .comments{
+            padding-bottom: 2%;
+        }
+    }
+
+    h3 {
+        padding-bottom: 1%;
+    }
+}
+
+.postComment {
+    background-color: #AD7A51;
+    // padding: 2%;
+    padding: 2% 0%;
+    .loginInfo {
+        display: grid;
+        grid-template-columns: 10% 90%;
+        div{
+            margin-left: 0;
+            p {
+                color: #FFFFFF;
+                font-size: 1.5vw;
+                // text-align: start;
+            }
+        }
+    }
+}
+
+.loginWrapper {
+    width: 100%;
+    margin-left: 10%;
+
+    p {
+        color: red;
+        font-size: 1.2vw;
+        margin-bottom: 2%;
+    }
+
+    input[type=text],
+    input[type=password] {
+        width: 40%;
+        padding: 1%;
+        margin-bottom: 1%;
+    }
+    .submitBtn{
+        border: none;
+        background-color: #61E692;
+        padding: 1%;
+        color: #FFFFFF;
+        border-radius: 0px 8px 8px 0px;
+        margin-left: 1%;
+    }
+
+}
