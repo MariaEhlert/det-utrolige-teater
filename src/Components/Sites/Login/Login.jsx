@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { useAuth } from "../../Helpers/Auth/Auth";
 import { myFetch } from "../../Helpers/Auth/Fetch";
 import { Layout } from "../../Helpers/Layout/Layout";
-import { MySite } from "../../MySite/MySite";
+import { MySite } from "../../Admin/MySite";
 import style from './Login.module.scss';
 
 export const Login = () => {

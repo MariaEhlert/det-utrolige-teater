@@ -17,7 +17,7 @@ export const CommentPost = (props) => {
         // bruger authHeader til at tjekke om sessionStorage eksisterer
         const result = await axios.post('https://api.mediehuset.net/detutroligeteater/reviews', formData, { headers: authHeader() });
         if (result) {
-            console.log('ok');
+            window.location.reload(false);
 
         } else {
             console.log(errors);
