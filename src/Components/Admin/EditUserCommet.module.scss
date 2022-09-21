@@ -1,0 +1,44 @@
+@import '../../App.scss';
+.editFormWrapper {
+    display: flex;
+    justify-content: center;
+    form {
+        width: 50%;
+        h2 {
+            padding-bottom: 5%;
+            padding-top: 3%;
+            text-align: center;
+        }
+        .formElement {
+            padding-bottom: 5%;
+            .formInput {
+                input[type=text],
+                textarea {
+                    width: 100%;
+                    padding: 0.5rem;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                }
+            }
+            input[type=number]{
+                width: 100%;
+                padding: 0.5rem;
+                border: 1px solid #ccc;
+                border-radius: 4px; 
+            } 
+        }
+        span {
+            text-align: center;
+            color: red;
+        }
+    }
+    .btnWrapper{
+        text-align: center;
+        button {
+            @include orangeBtn;
+            margin-left: 3%;
+            padding: 2%;
+            cursor: pointer;
+        }
+    }
+}

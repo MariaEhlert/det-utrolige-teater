@@ -4,6 +4,7 @@ import { authHeader, useAuth } from "../Helpers/Auth/Auth";
 import UserCommentIcon from '../../Assets/Image/Usercomments-icon.png'
 import DeleteIcon from '../../Assets/Image/Delete-icon.png'
 import EditIcon from '../../Assets/Image/Edit-icon.png'
+import { Link } from "react-router-dom";
 // import { useParams } from "react-router-dom";
 
 export const UserCommentList = () => {
@@ -58,7 +59,10 @@ export const UserCommentList = () => {
                         <td>{item.event_title}</td>
                         <td>{item.comment}</td>
                         <td>{item.num_stars}</td>
-                        <td className="imageTd"><img src={EditIcon} alt="edit-icon" /> <img onClick={() => deleteComment(item.id)} src={DeleteIcon} alt="delete-icon" /></td>
+                        <td className="imageTd"> 
+                        <Link to={`/admin/${item.id}`}><img src={EditIcon} alt="edit-icon" /></Link> 
+                        <img onClick={() => deleteComment(item.id)} src={DeleteIcon} alt="delete-icon" />
+                        </td>
                     </tr>
                         )
                     })}

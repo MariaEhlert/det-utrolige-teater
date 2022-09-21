@@ -19,7 +19,7 @@ export const BurgerMenu = () => {
                 <li><NavLink className="navigationLinks" to='/' onClick={handleToggle}>FORSIDE</NavLink></li>
                 <li><NavLink className="navigationLinks" to='/events' onClick={handleToggle}>FORESTILLINGER &#38; EVENTS</NavLink></li>
                 <li><NavLink className="navigationLinks" to='/actors' onClick={handleToggle}>SKUESPILLERE</NavLink></li>
-                <li><NavLink className="navigationLinks" to='/login' onClick={handleToggle}>LOGIN</NavLink></li>
+                <li><NavLink className="navigationLinks" to='/admin' onClick={handleToggle}>LOGIN</NavLink></li>
             </ul>
         </>
     )
