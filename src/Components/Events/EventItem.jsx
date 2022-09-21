@@ -23,7 +23,7 @@ export const EventItem = props => {
                     </div>
                     <div className='btnWrapper'>
                         <Link to={`/events/${props.data.id}`}><button className='readMore'>LÆS MERE</button></Link>
-                        <Link to={''}><button className='buyTicket'>KØB BILLET</button></Link>
+                        <Link to={`/buyticket/${props.data.id}`}><button className='buyTicket'>KØB BILLET</button></Link>
                     </div>
                 </figcaption>
             </figure>

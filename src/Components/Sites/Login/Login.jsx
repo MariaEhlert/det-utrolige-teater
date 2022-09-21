@@ -74,8 +74,12 @@ export const Login = () => {
                         // hvis bruger er logget ind vises alle brugers kommentar 
                         // og en meddelese med bruger navn og en logud knap
                         <section className={style.loggedInWrapper}>
-                            <p>Du er logget ind som {loginData.username}</p>
-                            <button onClick={logOut}>Log ud</button>
+                            <div className={style.logOutWrapper}>
+                                <p>Du er logget ind som {loginData.username}</p>
+                                <div className={style.logoutBtn}>
+                                    <button onClick={logOut}>Log ud</button>
+                                </div>
+                            </div>
                             <MySite/>
                         </section>
                     )

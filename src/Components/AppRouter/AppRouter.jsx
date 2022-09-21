@@ -7,6 +7,7 @@ import { EventDetails } from "../Events/EventDetails"
 import { EventsList } from "../Sites/PerformancesAndEvents/EventsList"
 import { ActorsDetails } from "../Sites/Actors/ActorsDetails"
 import { SearchResult } from "../Search/SearchResult"
+import { BuyTicket } from "../BuyTicket/BuyTicket"
 
 export const AppRouter = () => {
   return (
@@ -22,6 +23,10 @@ export const AppRouter = () => {
       </Route>
       <Route path="/login" element={<Login/>}/>
       <Route path="/search" element={<SearchResult/>}/>
+      <Route path="/buyticket">
+        <Route index element={<NoPage/>}/>
+        <Route path=":event_id" element={<BuyTicket/>}/>
+      </Route>
       <Route path="*" element={<NoPage />} />
     </Routes>
   )

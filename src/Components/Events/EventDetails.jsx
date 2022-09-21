@@ -55,7 +55,7 @@ export const EventDetails = () => {
                             <h2>{eventDetails.title}</h2>
                             <h3>{eventDetails.genre}</h3>
                             <div className={style.buyTicket}>
-                                <Link to={''}><button >KØB BILLET</button></Link>
+                                <Link to={`/buyticket/${eventDetails.id}`}><button >KØB BILLET</button></Link>
                             </div>
                             <div className={style.descriptionWrapper}>
                                 <p>{eventDetails.description}</p>

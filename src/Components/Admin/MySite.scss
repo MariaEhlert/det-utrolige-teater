@@ -1,15 +1,14 @@
 .farvoriteTable{
-    // background-color: red;
+    padding-top: 3%;
     .farvoriteHead{
         display: grid;
         grid-template-columns: 10% 90%;
         img{
-            // text-align: left;
             margin-left: 1%;
-            width: 50%;
+            width: 40%;
         }
         h3{
-            margin-left: -4%;
+            margin-left: -5%;
         }
     }
     table{
@@ -29,6 +28,55 @@
                     border-bottom: 1px solid #70707073;
                     font-size: 1.4vw;
 
+                }
+            }
+        }
+        tbody{
+            tr{
+                td{
+                    padding: 1% 0% 1% 0%;
+                    border-bottom: 1px solid #70707073;
+                    p{
+                        font-size: 1.4vw;
+                    }                 
+                }
+                .imageTd{
+                    text-align: right;
+                    padding-top: 2%;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.commentTable{
+    padding-top: 5%;
+    .commentHead{
+        display: grid;
+        grid-template-columns: 10% 90%;
+        img{
+            margin-left: 1%;
+            width: 40%;
+        }
+        h3{
+            margin-left: -5%;
+        }
+    }
+    table{
+        border-collapse: collapse;
+        width: 100%;
+        thead{
+            tr{
+                text-align: left;
+                th{
+                    padding: 1% 0% 1% 0%;
+                    border-bottom: 1px solid #70707073;
+                    font-size: 1.4vw;
+
+                }
+                .editTh{
+                    text-align: right;
                 }
             }
         }
