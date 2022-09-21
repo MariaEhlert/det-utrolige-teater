@@ -38,8 +38,8 @@ export const UserCommentList = () => {
     }
 
     return (
-        <article className="commentTable">
-            <div className="commentHead">
+        <article className="farvoriteTable">
+            <div className="farvoriteHead">
                 <img src={UserCommentIcon} alt="usercomment-icon" />
                 <h3>MINE ANMELDELSER</h3>
             </div>
@@ -49,21 +49,21 @@ export const UserCommentList = () => {
                         <th>FORESTILLINGER</th>
                         <th>EMNE</th>
                         <th>ANTAL STJERNER</th>
-                        <th className="editTh">REDIGER</th>
+                        <th className="thEnd">REDIGER</th>
                     </tr>
                 </thead>
                 <tbody>
-            {userCommentList.filter(user => user.user_id == loginData.user_id).map(item => {
-                return (
-                    <tr key={item.id}>
-                        <td>{item.event_title}</td>
-                        <td>{item.comment}</td>
-                        <td>{item.num_stars}</td>
-                        <td className="imageTd"> 
-                        <Link to={`/admin/${item.id}`}><img src={EditIcon} alt="edit-icon" /></Link> 
-                        <img onClick={() => deleteComment(item.id)} src={DeleteIcon} alt="delete-icon" />
-                        </td>
-                    </tr>
+                    {userCommentList.filter(user => user.user_id == loginData.user_id).map(item => {
+                        return (
+                            <tr key={item.id}>
+                                <td>{item.event_title}, {item.stage_name}</td>
+                                <td>{item.comment}</td>
+                                <td>{item.num_stars}</td>
+                                <td className="imageTd">
+                                    <Link to={`/admin/${item.id}`}><img src={EditIcon} alt="edit-icon" /></Link>
+                                    <img onClick={() => deleteComment(item.id)} src={DeleteIcon} alt="delete-icon" />
+                                </td>
+                            </tr>
                         )
                     })}
                 </tbody>

@@ -16,18 +16,15 @@
         width: 100%;
         thead{
             tr{
-                
-                .thOne{
+                th{
+                    padding: 1% 0% 1% 0%;
                     text-align: start;    
-                }
-                .thTwo{
-                    text-align: right;
-                }
-                th{
-                    padding: 1% 0% 1% 0%;
                     border-bottom: 1px solid #70707073;
                     font-size: 1.4vw;
-
+                    
+                }
+                .thEnd{
+                    text-align: right;
                 }
             }
         }
@@ -50,51 +47,51 @@
     }
 }
 
-.commentTable{
-    padding-top: 5%;
-    .commentHead{
-        display: grid;
-        grid-template-columns: 10% 90%;
-        img{
-            margin-left: 1%;
-            width: 40%;
-        }
-        h3{
-            margin-left: -5%;
-        }
-    }
-    table{
-        border-collapse: collapse;
-        width: 100%;
-        thead{
-            tr{
-                text-align: left;
-                th{
-                    padding: 1% 0% 1% 0%;
-                    border-bottom: 1px solid #70707073;
-                    font-size: 1.4vw;
+// .commentTable{
+//     padding-top: 5%;
+//     .commentHead{
+//         display: grid;
+//         grid-template-columns: 10% 90%;
+//         img{
+//             margin-left: 1%;
+//             width: 40%;
+//         }
+//         h3{
+//             margin-left: -5%;
+//         }
+//     }
+//     table{
+//         border-collapse: collapse;
+//         width: 100%;
+//         thead{
+//             tr{
+//                 text-align: left;
+//                 th{
+//                     padding: 1% 0% 1% 0%;
+//                     border-bottom: 1px solid #70707073;
+//                     font-size: 1.4vw;
 
-                }
-                .editTh{
-                    text-align: right;
-                }
-            }
-        }
-        tbody{
-            tr{
-                td{
-                    padding: 1% 0% 1% 0%;
-                    border-bottom: 1px solid #70707073;
-                    p{
-                        font-size: 1.4vw;
-                    }                 
-                }
-                .imageTd{
-                    text-align: right;
-                    padding-top: 2%;
-                    cursor: pointer;
-                }
-            }
-        }
-    }
-}
+//                 }
+//                 .editTh{
+//                     text-align: right;
+//                 }
+//             }
+//         }
+//         tbody{
+//             tr{
+//                 td{
+//                     padding: 1% 0% 1% 0%;
+//                     border-bottom: 1px solid #70707073;
+//                     p{
+//                         font-size: 1.4vw;
+//                     }                 
+//                 }
+//                 .imageTd{
+//                     text-align: right;
+//                     padding-top: 2%;
+//                     cursor: pointer;
+//                 }
+//             }
+//         }
+//     }
+// }

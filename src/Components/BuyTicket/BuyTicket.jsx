@@ -3,9 +3,11 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Layout } from "../Helpers/Layout/Layout"
 import Moment from "moment";
+import { PostReservation } from "./PostReservation";
 
 
 export const BuyTicket = () => {
+    const {id} = useParams();
     const { event_id } = useParams();
     const [eventDetails, setEventDetails] = useState();
     useEffect(() => {
@@ -39,29 +41,10 @@ export const BuyTicket = () => {
                         <h3>{StartDate()} KL. {eventDetails.starttime}</h3>
                         <h4 >BILLETPRIS: {new Intl.NumberFormat("da").format(eventDetails.price)} DKK</h4>
                         <p>PRIS INKL. MOMS</p>
-                        <form>
-                            <div>
-                                <label>FORNAVN</label>
-                                <input type="text" id="" />
-                            </div>
-                            <div>
-                                <label>EFTERNAVN</label>
-                                <input type="text" id="" />
-                            </div>
-                            <div>
-                                <label>VEJNAVN &#38; BY</label>
-                                <input type="text" id="" />
-                                <input type="number" id="" />
-                            </div>
-                            <div>
-                                <label>POSTNR. &#38; BY</label>
-                                <input type="number" id="" />
-                                <input type="text" id="" />
-                            </div>
-                        </form>
                     </>
                 ) : (<>...Loading</>)
                 }
+                <PostReservation ticket_id={id}/>
             </section>
         </Layout>
     )

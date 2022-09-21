@@ -28,8 +28,8 @@ export const UserFavoriteList = () => {
             <table>
                 <thead>
                     <tr>
-                        <th className="thOne">FORESTILLINGER</th>
-                        <th className="thTwo">REDIGER</th>
+                        <th>FORESTILLINGER</th>
+                        <th className="thEnd">REDIGER</th>
                     </tr>
                 </thead>
                 <tbody>
