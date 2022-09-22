@@ -1,3 +1,23 @@
+@import '../../App.scss';
 .buyTicketWrapper{
-    
+    @include coloredThinBorder;
+    // background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .eventImageWrapper{
+        @include coloredBigBorder;
+        img{
+            width: 100%;
+        }
+    }
+    .eventInfoWrapper{
+        // background-color: red;
+        padding: 5%;
+        text-align: end;
+        margin-right: 1%;
+        // text-align: right;
+        figcaption{
+            // text-align: right;
+        }
+    }
 }

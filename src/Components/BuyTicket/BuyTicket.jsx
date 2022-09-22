@@ -37,35 +37,38 @@ export const BuyTicket = () => {
     }
     return (
         <Layout title='Køb billet' description='Køb billet'>
-            <section className={style.buyTicketWrapper}>
-                <h1>Køb billet</h1>
-                <hr />
+
+            <>
                 {eventDetails && eventDetails ? (
-                    <>
-                        <article>
-                            <figure>
-                                <img src={eventDetails.image_medium} alt={eventDetails.id} />
-                                <figcaption>
-                                    <h4>{eventDetails.title}</h4>
-                                    <h3>{StartDate()} KL. {eventDetails.starttime}</h3>
-                                </figcaption>
-                            </figure>
-                        </article>
-                        <article>
-                            {loginData ? (
-                                <PostReservation event_id={eventDetails.id} />
-                                ) : (
-                                    <>
-                                    <p>Du skal være logget ind for at kunne bestille en billet</p>
-                                </>
-                            )}
+                    <section className={style.buyTicketWrapper}>
+                        <figure className={style.eventImageWrapper}>
+                            <img src={eventDetails.image_medium} alt={eventDetails.id} />
+                        </figure>
+                        <article className={style.eventInfoWrapper}>
+                            <figcaption>
+                                <h1>Køb billet</h1>
+                                <hr />
+                                <h4>{eventDetails.title}</h4>
+                                <h3>{StartDate()} KL. {eventDetails.starttime}</h3>
+                            </figcaption>
                             <h4 >BILLETPRIS: {new Intl.NumberFormat("da").format(eventDetails.price)} DKK</h4>
                             <p>PRIS INKL. MOMS</p>
                         </article>
-                    </>
+                        <article>
+                            {/* {console.log(eventDetails.id)} */}
+                            {loginData ? (
+                                <PostReservation event_id={eventDetails.id} />
+                            ) : (
+                                <>
+                                    <p>Du skal være logget ind for at kunne bestille en billet</p>
+                                </>
+                            )}
+                        </article>
+
+                    </section>
                 ) : (<>...Loading</>)
                 }
-            </section>
+            </>
         </Layout>
     )
 }

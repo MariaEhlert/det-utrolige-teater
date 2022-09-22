@@ -24,7 +24,7 @@ export const ApproveTicket = () => {
         }
         getTicketData();
     }, []);
-    console.log(ticketNumber);
+    // console.log(ticketNumber);
 
     return (
         <>
@@ -33,7 +33,7 @@ export const ApproveTicket = () => {
 
             <h4>KUNDE:</h4>
             {approveTicket.filter(user => user.id == ticketNumber).map(item => {
-                console.log(item);
+                // console.log(item);
                 return (
                     <article key={item.id}>
                         <p>{item.firstname} {item.lastname}</p>
