@@ -6,6 +6,8 @@ import DeleteIcon from '../../Assets/Image/Delete-icon.png'
 
 export const UserReservationList = () => {
     const [reservationList, setReservationList] = useState([]);
+    // const [eventItem, setEventItem] = useState([]);
+
     useEffect(() => {
         const getReservationList = async () => {
             try {
@@ -42,26 +44,19 @@ export const UserReservationList = () => {
                             await axios.delete(`https://api.mediehuset.net/detutroligeteater/reservations/${item.id}`, { headers: authHeader() })
                             window.location.reload(false);
                         }
-                        console.log(item);
                         return (
                             <tr key={item.id}>
                                 <td>DATO &#38; TID</td>
-                                <td >FORESTILLINGER</td>
+                                <td >{item.event_title}</td>
                                 <td>SCENE</td>
                                 <td>ANTAL</td>
                                 <td>PRIS</td>
                                 <td className="imageTd"><img onClick={() => deleteFarvorite()} src={DeleteIcon} alt="delete-icon" /> </td>
                             </tr>
                         )
-                    })}
+                    })}                    
                 </tbody>
             </table>
-            {/* <form>
-			<input type="hidden" name="" value={product_id} />
-			<button type="button" onClick={decreaseCartItem}>-</button>
-			<input type="number" disabled value={(quantityInCart) ? quantityInCart : 0}></input>
-			<button type="button" onClick={increaseCartItem}>+</button>
-		</form> */}
         </article>
     )
 }

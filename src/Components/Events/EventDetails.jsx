@@ -22,6 +22,16 @@ export const EventDetails = () => {
         }
         getEventDetails();
     }, [event_id])
+
+    // useEffect(() => {
+    //     const data = localStorage.getItem('event-data');
+    //     if(data){
+    //         setEventDetails(JSON.parse(data));
+    //     }
+    // }, [])
+    // useEffect(() => {
+    //     localStorage.setItem('event-data', JSON.stringify(eventDetails));
+    // })
     //Moment er en npm pakke
     // gør at datoen kommer ud som dag, månede og år
     const StartDate = () => {

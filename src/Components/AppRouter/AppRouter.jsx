@@ -9,7 +9,7 @@ import { ActorsDetails } from "../Sites/Actors/ActorsDetails"
 import { SearchResult } from "../Search/SearchResult"
 import { BuyTicket } from "../BuyTicket/BuyTicket"
 import { EditUserComment } from "../Admin/EditUserComment"
-import { ShowTicket } from "../BuyTicket/ShowTicket"
+import { ApproveTicket } from "../BuyTicket/ApproveTicket"
 
 export const AppRouter = () => {
   return (
@@ -36,15 +36,9 @@ export const AppRouter = () => {
       <Route path="/buyticket">
         <Route index element={<NoPage/>}/>
         <Route path=":event_id" element={<BuyTicket/>}/>
+        {/* <Route path=":new_id" element={<ApproveTicket/>}/> */}
       </Route>
-      {/* <Route path="/buyticket">
-				<Route index element={<NoPage />}></Route>
-				<Route path=":event_id">
-					<Route index element={<BuyTicket />}></Route>
-					<Route path=":ticket_id" element={<ShowTicket />}></Route>
-				</Route>
-			</Route> */}
-      <Route path="/buyticket/showticket" element={<ShowTicket/>}/>
+      <Route path="/buyticket/showticket" element={<ApproveTicket/>}/>
 
       <Route path="*" element={<NoPage />} />
     </Routes>
