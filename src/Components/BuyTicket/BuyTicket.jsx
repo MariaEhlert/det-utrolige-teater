@@ -41,19 +41,21 @@ export const BuyTicket = () => {
             <>
                 {eventDetails && eventDetails ? (
                     <section className={style.buyTicketWrapper}>
-                        <figure className={style.eventImageWrapper}>
-                            <img src={eventDetails.image_medium} alt={eventDetails.id} />
-                        </figure>
-                        <article className={style.eventInfoWrapper}>
-                            <figcaption>
-                                <h1>Køb billet</h1>
-                                <hr />
-                                <h4>{eventDetails.title}</h4>
-                                <h3>{StartDate()} KL. {eventDetails.starttime}</h3>
-                            </figcaption>
-                            <h4 >BILLETPRIS: {new Intl.NumberFormat("da").format(eventDetails.price)} DKK</h4>
-                            <p>PRIS INKL. MOMS</p>
-                        </article>
+                        <div className={style.eventWrapper}>
+                            <figure className={style.eventImageWrapper}>
+                                <img src={eventDetails.image_medium} alt={eventDetails.id} />
+                            </figure>
+                            <article className={style.eventInfoWrapper}>
+                                <figcaption>
+                                    <h1>Køb billet</h1>
+                                    <hr />
+                                    <h4>{eventDetails.title}</h4>
+                                    <h3>{StartDate()} KL. {eventDetails.starttime}</h3>
+                                <h4 >BILLETPRIS: {new Intl.NumberFormat("da").format(eventDetails.price)} DKK</h4>
+                                <p>PRIS INKL. MOMS</p>
+                                </figcaption>
+                            </article>
+                        </div>
                         <article>
                             {/* {console.log(eventDetails.id)} */}
                             {loginData ? (

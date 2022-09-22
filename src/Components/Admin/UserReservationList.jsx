@@ -6,8 +6,6 @@ import DeleteIcon from '../../Assets/Image/Delete-icon.png'
 
 export const UserReservationList = () => {
     const [reservationList, setReservationList] = useState([]);
-    // const [eventItem, setEventItem] = useState([]);
-
     useEffect(() => {
         const getReservationList = async () => {
             try {

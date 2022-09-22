@@ -1,23 +1,25 @@
 @import '../../App.scss';
 .buyTicketWrapper{
     @include coloredThinBorder;
-    // background-color: whitesmoke;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    .eventImageWrapper{
-        @include coloredBigBorder;
-        img{
-            width: 100%;
+    .eventWrapper{
+        // background-color: wheat;
+        display: grid;
+        // grid-template-columns: 1fr 2fr;
+        grid-template-columns: 50% 50%;
+        // height: 50vh;
+        .eventImageWrapper{
+            @include coloredBigBorder;
+            img{
+                width: 100%;
+            }
         }
-    }
-    .eventInfoWrapper{
-        // background-color: red;
-        padding: 5%;
-        text-align: end;
-        margin-right: 1%;
-        // text-align: right;
-        figcaption{
-            // text-align: right;
+        .eventInfoWrapper{
+            // background-color: whitesmoke;
+            width: 100%;
+            text-align: right;
+            figcaption{
+                padding: 3% 5%;
+            }
         }
     }
 }

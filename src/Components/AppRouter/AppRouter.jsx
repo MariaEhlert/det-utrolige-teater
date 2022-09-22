@@ -10,6 +10,7 @@ import { SearchResult } from "../Search/SearchResult"
 import { BuyTicket } from "../BuyTicket/BuyTicket"
 import { EditUserComment } from "../Admin/EditUserComment"
 import { ApproveTicket } from "../BuyTicket/ApproveTicket"
+import { ThankYou } from "../BuyTicket/ThankYou"
 
 export const AppRouter = () => {
   return (
@@ -39,6 +40,7 @@ export const AppRouter = () => {
         {/* <Route path=":new_id" element={<ApproveTicket/>}/> */}
       </Route>
       <Route path="/buyticket/showticket" element={<ApproveTicket/>}/>
+      <Route path="/thankyou" element={<ThankYou/>}/>
 
       <Route path="*" element={<NoPage />} />
     </Routes>

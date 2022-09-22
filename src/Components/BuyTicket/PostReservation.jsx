@@ -1,14 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { authHeader, useAuth } from "../Helpers/Auth/Auth";
 import style from './PostReservation.module.scss';
-import seatIcon from '../../Assets/Image/Seats-icon.png';
-import seatIconToggle from '../../Assets/Image/Seats-icon-toggle.png';
-import seatIconOnClick from '../../Assets/Image/Seats-icon-onclick.png';
-
-
 
 export const PostReservation = (props) => {
     const navigate = useNavigate()
@@ -98,86 +93,33 @@ export const PostReservation = (props) => {
                     <article>
                         {seats && seats.map(item => {
                             const handleToggle = id => {
-                                console.log(id);
-                                return { ...item }
+                                // console.log(id);
+                                return { ...item.id }
                             }
                             return (
                                 <div key={item.id} >
                                     {item.is_reserved > 0 ? (
                                         <>
-                                            <img src={seatIconToggle} alt="seatToggle" />
-                                            {/* {item.id} */}
+                                        <div className={style.checked}></div>
                                         </>
                                     ) : (
                                         <>
-                                            {/* <div className={style.toggleBtn} onClick={() => onClickToggle()}><img src={seatIcon} alt="seat" /></div> */}
-                                            {/* {item.id} */}
-                                            <div onClick={() => handleToggle(item.id)}>
-                                                <input type="checkbox" id="seats[]"{...register('item.id', { required: true })} />
+                                            <div  className={style.seat} onClick={() => handleToggle(item.id)}>
+                                                {/* <input type="checkbox"  id={style.seat}{...register('seats[]', { required: true })} /> */}
                                             </div>
-                                            {/* {console.log(item.id)} */}
                                         </>
                                     )}
+                                                
                                 </div>
                             )
                         })}
                     </article>
                 </article>
-                <p>VÆLG SIDDEPLADSER</p>
+                <p className={style.seatText}>VÆLG SIDDEPLADSER</p>
                 <div className={style.submitBtn}>
-                    <button >GODKEND BESTILLINGr</button>
+                    <button >GODKEND BESTILLING</button>
                 </div>
             </form>
         )
     )
 }
-
-// export const Seats = (props) => {
-//     const [seats, setSeats] = useState();
-//     const { register, formState: { errors } } = useForm();
-//     useEffect(() => {
-//         const getSeatsData = async () => {
-//             try {
-//                 const result = await axios.get(`https://api.mediehuset.net/detutroligeteater/seats/${props.event_id}`);
-//                 if (result.data) {
-//                     setSeats(result.data.items);
-//                 }
-//             } catch (error) {
-//                 console.log(error);
-//             }
-//         }
-//         getSeatsData();
-//     }, [props])
-//     // console.log(seats);
-
-
-
-//     return (
-//         <article className={style.seatWrapper}>
-//             {seats && seats.map(item => {
-//                 return (
-//                     <div key={item.id} >
-//                         {item.is_reserved > 0 ? (
-//                             <>
-//                                 <img src={seatIconToggle} alt="seatToggle" />
-//                                 {/* {item.id} */}
-//                             </>
-//                         ) : (
-//                             <>
-//                                 {/* <div className={style.toggleBtn} onClick={() => onClickToggle()}><img src={seatIcon} alt="seat" /></div> */}
-//                                 {/* {item.id} */}
-//                                 <input type="checkbox" {...register('seats[]', { required: true })} />
-//                             </>
-//                         )}
-//                     </div>
-//                 )
-//             })}
-
-//         </article>
-//     )
-// }
-// const onClickToggle = () => {
-//     return (
-//         <img src={seatIconOnClick} alt="seatOnclick" />
-//     )
-// }
