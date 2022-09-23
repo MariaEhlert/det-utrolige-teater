@@ -91,6 +91,7 @@ const Rating = (props) => {
     const activeStars = (props.num_stars);
     return(
         <>
+        {/* spread operator til at lave et nyt array  */}
         {[...new Array(totalStars)].map((item, index) => {
             return (
                 index < activeStars ? <AiFillStar key={index}/> : <AiOutlineStar key={index}/>
