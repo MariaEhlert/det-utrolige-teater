@@ -1,12 +1,11 @@
 @import '../../App.scss';
 
 form {
-
     .userFormWrapper {
         margin-right: 1%;
-        margin-top: -15%;
+        margin-top: -20%;
         width: 45%;
-        padding-bottom: 2%;
+        padding-bottom: 5%;
 
         .formElement {
             display: grid;
@@ -71,7 +70,6 @@ form {
 
                 .seat {
                     border-radius: 34px;
-                    // background-color: #ccc;
                     width: 38px;
                     height: 38px;
                     border-radius: 50%;
@@ -80,27 +78,7 @@ form {
                     input {
                         opacity: 0;
                     }
-                    // input[type="checkbox"] {
-                    //     // appearance: none;
-                    // }
                 }
-                // input:checked {
-                //     background-color: red;
-                // }
-                // .seat::after{
-                //     background-color: red;
-
-                // }
-
-                // .seat:checked {
-                //     background-color: red;
-                // }
-
-                // .seat::before {
-                //     background-color: red;
-                // }
-
-
             }
         }
     }
@@ -116,7 +94,29 @@ form {
 
         button {
             @include orangeBtn;
-            padding: 2%;
         }
+    }
+}
+
+//BREAKPOINTS
+$x-large: 1300px;
+$large: 1300px;
+$tablet: 980px;
+$mobile: 580px;
+
+// @media screen and (min-width: $x-large) {
+//     body{
+//     }
+//   }
+@media screen and (max-width: $large) {
+    body{
+    }
+  }
+@media screen and (max-width: $tablet) {
+  body{    
+  }
+}
+@media screen and (max-width: $mobile){
+    body{  
     }
 }

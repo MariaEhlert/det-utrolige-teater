@@ -56,13 +56,12 @@ export const BuyTicket = () => {
                                 </figcaption>
                             </article>
                         </div>
-                        <article>
-                            {/* {console.log(eventDetails.id)} */}
+                        <article className={style.formWrapper}>
                             {loginData ? (
                                 <PostReservation event_id={eventDetails.id} />
                             ) : (
                                 <>
-                                    <p>Du skal være logget ind for at kunne bestille en billet</p>
+                                    <p className={style.notLoginText}>Du skal være logget ind for at kunne bestille en billet</p>
                                 </>
                             )}
                         </article>

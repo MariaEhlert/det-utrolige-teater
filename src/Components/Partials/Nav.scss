@@ -1,0 +1,27 @@
+header{
+    nav {
+        margin-left: 20%;
+        margin-top: -3%;
+        @media (width < 1199px) {
+            display: none;
+        }
+        .topnav{
+            text-align: end;
+            li{
+                display: inline-block;
+                padding-left: 5%;
+                a{
+                    font-size: 1.3vw;
+                    color: #707070;
+
+                    &:hover{
+                        color: #D39D5B;
+                    }
+                    &.active{
+                        color: #D39D5B;
+                    }
+                }
+            }
+        }
+    }
+}

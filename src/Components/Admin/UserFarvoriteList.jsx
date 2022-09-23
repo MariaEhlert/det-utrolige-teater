@@ -40,7 +40,7 @@ export const UserFavoriteList = () => {
                         }
                         return (
                             <tr key={item.event_id}>
-                                <td><p>{item.title}, {item.stage_name}</p></td>
+                                <td>{item.title}, {item.stage_name}</td>
                                 <td className="imageTd"><img onClick={() => deleteFarvorite()} src={DeleteIcon} alt="delete-icon" /> </td>
                             </tr>
                         )

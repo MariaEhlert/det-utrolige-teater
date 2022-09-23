@@ -5,16 +5,13 @@ import './Header.scss';
 import { BurgerMenu } from "./BurgerMenu";
 
 export const Header = () => {
-
 	return (
 		<header>
 			<SearchBar />
 			<div className="logoWrapper">
 				<img src={logo} alt="logo" />
 			</div>
-			<nav className='topNav'>
-				<Nav />
-			</nav>
+			<Nav />
 			<BurgerMenu />
 		</header>
 	)

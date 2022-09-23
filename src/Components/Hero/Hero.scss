@@ -4,11 +4,11 @@
     figure{
         display: grid;
         grid-template-columns: 30% 70%;
-        // gap: 1rem;
-            img{
-                @include coloredBigBorder;
-                width: 96%;
-                height: 40vh
+        max-height: 50vh;
+        img{
+            @include coloredBigBorder;
+            width: 96%;
+                height: 37vh;
             }
         figcaption{
             width: 80%;
@@ -21,5 +21,43 @@
                 margin-left: 2rem;
             }
         }
+    }
+}
+//COLOR MODS
+$bg-red: #c66;
+$bg-yellow: #fc6;
+$bg-green: #9c9;
+$bg-blue: #699;
+//BREAKPOINTS
+$x-large: 1300px;
+$large: 1300px;
+$tablet: 980px;
+$mobile: 580px;
+
+@media screen and (min-width: $x-large) {
+    body{
+      background-color: $bg-blue;
+      .heroWrapper{
+        figure{
+                img{
+                    height: 44vh;
+                }
+        }
+    }
+    }
+  }
+@media screen and (max-width: $large) {
+    body{
+      background-color: $bg-red;
+    }
+  }
+@media screen and (max-width: $tablet) {
+  body{
+    background-color: $bg-yellow;     
+  }
+}
+@media screen and (max-width: $mobile){
+    body{
+    background-color: $bg-green;  
     }
 }

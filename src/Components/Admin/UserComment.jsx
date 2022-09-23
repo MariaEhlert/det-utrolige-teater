@@ -6,6 +6,7 @@ import DeleteIcon from '../../Assets/Image/Delete-icon.png'
 import EditIcon from '../../Assets/Image/Edit-icon.png'
 import { Link } from "react-router-dom";
 // import { useParams } from "react-router-dom";
+import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 
 export const UserCommentList = () => {
     // const {id} = useParams();
@@ -36,7 +37,6 @@ export const UserCommentList = () => {
             console.log(error);
         }
     }
-
     return (
         <article className="farvoriteTable">
             <div className="farvoriteHead">

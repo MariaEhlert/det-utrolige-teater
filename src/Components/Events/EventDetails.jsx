@@ -59,7 +59,7 @@ export const EventDetails = () => {
                             <h6>{eventDetails.stage_name}</h6>
                             <div className={style.infoheadWrapper}>
                                 <h3 className={style.place}>{StartDate()} - {StopDate()}</h3>
-                                <h3 className={style.price}>BILLETPRIS: {new Intl.NumberFormat("da").format(eventDetails.price)}</h3>
+                                <h3 className={style.price}>BILLETPRIS: {new Intl.NumberFormat("da").format(eventDetails.price)} DKK</h3>
                             </div>
                             <hr></hr>
                             <h2>{eventDetails.title}</h2>

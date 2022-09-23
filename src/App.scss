@@ -1,81 +1,184 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
-// Primær: #D39D5B
-// Sekundær: #AD7A51
-// Tertiær: #30454C
-
-*{
+* {
     padding: 0;
     margin: 0 auto;
     text-decoration: none;
 }
-body{
+
+body {
     padding-top: 2%;
     font-family: 'Titillium Web', sans-serif;
     padding-left: 15%;
     padding-right: 15%;
-    main{
+
+    main {
         padding-top: 7%;
         color: #707070;
         white-space: pre-wrap;
-        h1{
+
+        h1 {
             color: #D39D5B;
             font-family: 'Playfair Display', serif;
             font-size: 3vw;
             font-weight: 100;
         }
-        h2{
+
+        h2 {
             font-family: 'Playfair Display', serif;
             color: #D39D5B;
             font-size: 3vw;
             font-weight: 100;
         }
-        h3{
+
+        h3 {
             font-weight: 400;
             font-size: 1.8vw;
 
         }
-        h6{
+
+        h6 {
             font-weight: 700;
             font-size: 1vw;
             font-size: 1.2vw;
         }
-        p{
+
+        p {
             font-size: 1.2vw;
         }
-        hr{
+
+        hr {
             opacity: 0.5;
         }
     }
 }
+
 @mixin coloredThinBorder {
-    border: 0.5px solid #D39D5B;  
+    border: 0.5px solid #D39D5B;
 }
+
 @mixin coloredBigBorder {
     background-color: #AD7A51;
     padding: 1rem;
 }
+
 @mixin sectionPadding {
- padding-bottom: 6%;   
+    padding-bottom: 6%;
 }
+
 @mixin orangeBtn {
     background-color: #AD7A51;
     color: #FFFFFF;
     border: none;
-    padding: 4%;
-    font-size: 1vw;
-    font-weight: 700;
-    cursor: pointer;
-}
-@mixin dackBlueBtn {
-    background-color: #30454C;
-    color: #FFFFFF;
-    border: none;
-    padding: 4%;
-    font-size: 1vw;
+    padding: 2%;
     font-weight: 700;
     cursor: pointer;
 }
 
+@mixin dackBlueBtn {
+    background-color: #30454C;
+    color: #FFFFFF;
+    border: none;
+    padding: 2%;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+//COLOR MODS
+$bg-red: #c66;
+$bg-yellow: rgba(255, 204, 102, 0.346);
+$bg-green: #9c9;
+$bg-blue: #699;
+//BREAKPOINTS
+$x-large: 1300px;
+$large: 1300px;
+$tablet: 980px;
+$mobile: 580px;
+
+@media screen and (min-width: $x-large) {
+    body {
+        background-color: $bg-blue;
+        main {
+            padding-top: 7%;
+            h1 {
+                font-size: 3vw;
+            }
+            h2 {
+                font-size: 3vw;
+            }
+            h3 {
+                font-size: 1.8vw;
+            }
+            h6 {
+                font-size: 1.2vw;
+            }
+            p {
+                font-size: 1.2vw;
+            }
+        }
+    }
+}
+
+// @media screen and (max-width: $large) {
+//     body{
+//       background-color: $bg-red;
+//     }
+//   }
+@media screen and (max-width: $tablet) {
+    body {
+        background-color: $bg-yellow;
+        padding-left: 5%;
+        padding-right: 5%;
+        main {
+            padding-top: 7%;
+            h1 {
+                font-size: 3vw;
+            }
+            h2 {
+                font-size: 4vw;
+            }
+            h3 {
+                font-size: 2vw;
+            }
+            h6 {
+                font-size: 1.5vw;
+            }
+            p {
+                font-size: 1.5vw;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    body {
+        background-color: $bg-green;
+    }
+}
+
+
+
+
+//BREAKPOINTS
+$x-large: 1300px;
+$large: 1300px;
+$tablet: 980px;
+$mobile: 580px;
+
+@media screen and (min-width: $x-large) {
+    body {}
+}
+
+@media screen and (max-width: $large) {
+    body {}
+}
+
+@media screen and (max-width: $tablet) {
+    body {}
+}
+
+@media screen and (max-width: $mobile) {
+    body {}
+}

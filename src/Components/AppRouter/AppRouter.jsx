@@ -15,7 +15,7 @@ import { ThankYou } from "../BuyTicket/ThankYou"
 export const AppRouter = () => {
   return (
     <Routes>
-      <Route index element={<Home />} />
+      <Route path="/home" element={<Home />} />
 
       <Route path="/events">
         <Route index element={<EventsList />}/>
@@ -37,9 +37,10 @@ export const AppRouter = () => {
       <Route path="/buyticket">
         <Route index element={<NoPage/>}/>
         <Route path=":event_id" element={<BuyTicket/>}/>
-        {/* <Route path=":new_id" element={<ApproveTicket/>}/> */}
       </Route>
+
       <Route path="/buyticket/showticket" element={<ApproveTicket/>}/>
+
       <Route path="/thankyou" element={<ThankYou/>}/>
 
       <Route path="*" element={<NoPage />} />

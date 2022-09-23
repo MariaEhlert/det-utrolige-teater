@@ -44,14 +44,58 @@
 
                     .readMore {
                         @include dackBlueBtn;
-                        margin-right: 3%;
+                        margin-right: 2%;
+                        padding: 5%
                     }
                     
                     .buyTicket {
                         @include orangeBtn;
+                        padding: 5%
                     }
                 }
             }
         }
     }
 }
+
+
+//BREAKPOINTS
+$x-large: 1300px;
+$large: 1300px;
+$tablet: 980px;
+$mobile: 580px;
+
+@media screen and (min-width: $x-large) {
+    body{
+        .threeRandomWrapper {            
+            .eventsWrapper {
+                figure {                    
+                    figcaption {
+                        max-height: 37vh;
+                        min-height: 37vh;
+                        margin-right: 3%;
+                        padding: 1rem 1rem 1rem 2rem;
+                        h3 {
+                            padding-top: 2%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+  }
+@media screen and (max-width: $large) {
+    body{
+    }
+  }
+@media screen and (max-width: $tablet) {
+  body{    
+  }
+}
+@media screen and (max-width: $mobile){
+    body{  
+    }
+}
+
+
+

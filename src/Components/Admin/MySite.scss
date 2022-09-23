@@ -47,51 +47,25 @@
     }
 }
 
-// .commentTable{
-//     padding-top: 5%;
-//     .commentHead{
-//         display: grid;
-//         grid-template-columns: 10% 90%;
-//         img{
-//             margin-left: 1%;
-//             width: 40%;
-//         }
-//         h3{
-//             margin-left: -5%;
-//         }
-//     }
-//     table{
-//         border-collapse: collapse;
-//         width: 100%;
-//         thead{
-//             tr{
-//                 text-align: left;
-//                 th{
-//                     padding: 1% 0% 1% 0%;
-//                     border-bottom: 1px solid #70707073;
-//                     font-size: 1.4vw;
+//BREAKPOINTS
+$x-large: 1300px;
+$large: 1300px;
+$tablet: 980px;
+$mobile: 580px;
 
-//                 }
-//                 .editTh{
-//                     text-align: right;
-//                 }
-//             }
-//         }
-//         tbody{
-//             tr{
-//                 td{
-//                     padding: 1% 0% 1% 0%;
-//                     border-bottom: 1px solid #70707073;
-//                     p{
-//                         font-size: 1.4vw;
-//                     }                 
-//                 }
-//                 .imageTd{
-//                     text-align: right;
-//                     padding-top: 2%;
-//                     cursor: pointer;
-//                 }
-//             }
-//         }
+// @media screen and (min-width: $x-large) {
+//     body{
 //     }
-// }
+//   }
+@media screen and (max-width: $large) {
+    body{
+    }
+  }
+@media screen and (max-width: $tablet) {
+  body{    
+  }
+}
+@media screen and (max-width: $mobile){
+    body{  
+    }
+}
