@@ -7,25 +7,20 @@ section {
         p{
             color: rgb(213, 20, 20);
         }
-
         .ratingElement {
             display: grid;
             grid-template-columns: 13% 87%;
-
             h6 {
                 color: #FFFFFF;
                 font-weight: 400;
                 margin-left: 1%;
                 font-size: 1.4vw;
             }
-
             .ratingInput {
                 margin-left: 1%;
-
                 input[type="radio"] {
                     display: none;
                 }
-
                 .numStar {
                     cursor: pointer;
                     font-size: 2vw;
@@ -33,9 +28,7 @@ section {
                 }
             }
         }
-
         .formElement {
-
             input[type=text],
             textarea {
                 width: 80%;
@@ -43,13 +36,11 @@ section {
                 border: 1px solid #ccc;
                 border-radius: 4px;
             }
-
             textarea {
                 height: 10vh;
                 position: relative;
                 margin-top: 1%;
             }
-
             button {
                 position: absolute;
                 background-color: #D39D5B;
@@ -57,9 +48,83 @@ section {
                 border-radius: 8px;
                 margin-left: 1%;
                 margin-top: 4.5%;
+                border: none;
+                color: #FFFFFF;
+            }
+        }
+    }
+}
+
+//BREAKPOINTS
+$x-large: 1300px;
+$large: 1300px;
+$tablet: 980px;
+$mobile: 580px;
+
+// @media screen and (min-width: $x-large) {
+//     body {}
+// }
+
+// @media screen and (max-width: $large) {
+//     body {}
+// }
+
+@media screen and (max-width: $tablet) {
+    body {
+        section {
+            form {
+                p{
+                    font-size: 1.5vw;
+                }
+                .ratingElement {
+                    display: grid;
+                    grid-template-columns: 16% 84%;
+                    h6 {
+                        font-size: 1.8vw;
+                        margin-top: -3%;
+                    }
+                    .ratingInput {
+                        .numStar {
+                            font-size: 2.4vw;
+                        }
+                    }
+                }
+                .formElement {
+                    button {
+                        margin-top: 8%;
+                    }
+                }
             }
         }
 
+    }
+}
 
+@media screen and (max-width: $mobile) {
+    body {
+        section {
+            form {
+                p{
+                    font-size: 2.3vw;
+                }
+                .ratingElement {
+                    display: grid;
+                    grid-template-columns: 17% 83%;
+                    h6 {
+                        font-size: 2.3vw;
+                    }
+                    .ratingInput {
+                        .numStar {
+                            font-size: 3vw;
+                        }
+                    }
+                }
+                .formElement {
+                    button {
+                        margin-top: 15%;
+                    }
+                }
+            }
+        }
     }
 }

@@ -15,7 +15,7 @@ import { ThankYou } from "../BuyTicket/ThankYou"
 export const AppRouter = () => {
   return (
     <Routes>
-      <Route path="/home" element={<Home />} />
+      <Route index element={<Home />} />
 
       <Route path="/events">
         <Route index element={<EventsList />}/>

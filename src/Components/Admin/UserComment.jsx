@@ -38,8 +38,8 @@ export const UserCommentList = () => {
         }
     }
     return (
-        <article className="farvoriteTable">
-            <div className="farvoriteHead">
+        <article className="adminTable">
+            <div className="adminHead">
                 <img src={UserCommentIcon} alt="usercomment-icon" />
                 <h3>MINE ANMELDELSER</h3>
             </div>

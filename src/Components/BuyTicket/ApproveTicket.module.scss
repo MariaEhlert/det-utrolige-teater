@@ -48,9 +48,6 @@
             h4{
                 font-size: 1.4vw;
             }
-            p{
-                
-            }
             h3{
                 font-size: 1.3vw;
                 padding-top: 2%;
@@ -65,8 +62,6 @@
             }
         }
     }
-
-
 }
 
 //BREAKPOINTS
@@ -79,15 +74,83 @@ $mobile: 580px;
 //     body{
 //     }
 //   }
-@media screen and (max-width: $large) {
-    body{
-    }
-  }
+// @media screen and (max-width: $large) {
+//     body{
+//     }
+//   }
 @media screen and (max-width: $tablet) {
-  body{    
+  body{  
+    .approveTicketWrapper{
+        .ticketWrapper{
+            .eventWrapper{
+                figure{
+                    figcaption{
+                        div{
+                            h4{
+                                font-size: 1.8vw;   
+                            }
+                            h6{
+                                font-size: 1.6vw;   
+                            }
+                        }
+                    }
+                }
+            }
+            .ticketInfo{
+                h4{
+                    font-size: 1.8vw;
+                }
+                h3{
+                    font-size: 1.6vw;
+                }
+            }
+        }
+    }  
   }
 }
 @media screen and (max-width: $mobile){
-    body{  
+    body{ 
+        .approveTicketWrapper{
+            .ticketWrapper{
+                .eventWrapper{
+                    figure{
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        img{
+                            width: 94%;   
+                        }
+                        figcaption{
+                            padding: 2% 0% 0% 1%;
+                            div{
+                                h4{
+                                    font-size: 2.5vw;   
+                                }
+                                h6{
+                                    font-size: 2.5vw;
+                                }
+                            }
+                        }
+                    }
+                }
+                .ticketInfo{
+                    width: 92.5%;
+                    margin-top: 1%;
+                    h4{
+                        font-size: 2.5vw;
+                    }
+                    p{
+                        font-size: 2.5vw;
+                    }
+                    h3{
+                        font-size: 2.5vw;
+                        padding-top: 2%;
+                        padding-bottom: 2%;
+                    }
+                }
+                .btnWrapper{
+                    text-align: center;
+                }
+            }
+        } 
     }
 }

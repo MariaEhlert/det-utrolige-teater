@@ -20,8 +20,8 @@ export const UserFavoriteList = () => {
         getFarvoriteData();
     }, [])
     return (
-        <article className="farvoriteTable">
-            <div className="farvoriteHead">
+        <article className="adminTable">
+            <div className="adminHead">
                 <img src={FavoriteIcon} alt="favorite-icon" />
                 <h3>MINE FAVORITTER</h3>
             </div>

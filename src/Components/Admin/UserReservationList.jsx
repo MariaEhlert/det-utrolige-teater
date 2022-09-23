@@ -20,8 +20,8 @@ export const UserReservationList = () => {
         getReservationList();
     }, [])
     return (
-        <article className="farvoriteTable">
-            <div className="farvoriteHead">
+        <article className="adminTable">
+            <div className="adminHead">
                 <img src={TicketIcon} alt="favorite-icon" />
                 <h3>MINE RESERVATIONER</h3>
             </div>

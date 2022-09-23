@@ -59,15 +59,70 @@ $mobile: 580px;
         }
     }
   }
-@media screen and (max-width: $large) {
-    body{
-    }
-  }
+// @media screen and (max-width: $large) {
+//     body{
+//     }
+//   }
 @media screen and (max-width: $tablet) {
-  body{    
+  body{
+    .actorWrapper{
+        div{
+            article{
+                height: 19vh;
+                figure{
+                    figcaption{
+                        p{
+                            font-size: 1.7vw;
+                        }
+                    }
+                    
+                }
+                a{
+                    margin-left: 35%;
+                    button{
+                        padding: 6%;
+                    }
+                }
+    
+            }
+        }
+    }    
   }
 }
 @media screen and (max-width: $mobile){
-    body{  
+    body{ 
+        .actorWrapper{
+            div{        
+                article{
+                    padding-bottom: 2%;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    height: 25vh;
+                    figure{
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 5%;
+                        img{
+                            width: 100%; 
+                        }
+                        figcaption{
+                            p{
+                                font-size: 2.3vw;
+                            }
+                        } 
+                    }
+                    a{
+                        margin-left: 80%;
+                        margin-top: -10%;
+                        button{
+                            @include dackBlueBtn;
+                            margin-top: 1%;
+                            min-height: 5vh;
+                            max-height: 5vh;
+                        }
+                    }
+                }
+            }
+        } 
     }
 }

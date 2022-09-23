@@ -1,6 +1,6 @@
-.farvoriteTable{
+.adminTable{
     padding-top: 3%;
-    .farvoriteHead{
+    .adminHead{
         display: grid;
         grid-template-columns: 10% 90%;
         img{
@@ -33,9 +33,9 @@
                 td{
                     padding: 1% 0% 1% 0%;
                     border-bottom: 1px solid #70707073;
-                    p{
-                        font-size: 1.4vw;
-                    }                 
+                    // p{
+                    //     font-size: 1.4vw;
+                    // }                 
                 }
                 .imageTd{
                     text-align: right;
@@ -57,15 +57,53 @@ $mobile: 580px;
 //     body{
 //     }
 //   }
-@media screen and (max-width: $large) {
-    body{
-    }
-  }
+// @media screen and (max-width: $large) {
+//     body{
+//     }
+//   }
 @media screen and (max-width: $tablet) {
-  body{    
+  body{ 
+    .adminTable{
+        table{
+            thead{
+                tr{
+                    th{
+                        font-size: 1.8vw; 
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    td{
+                        font-size: 1.8vw;
+                                       
+                    }
+                }
+            }
+        }
+    }     
   }
 }
 @media screen and (max-width: $mobile){
-    body{  
+    body{ 
+        .adminTable{
+            table{
+                thead{
+                    tr{
+                        th{
+                            font-size: 2.3vw; 
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        td{
+                            font-size: 2.3vw;
+                                           
+                        }
+                    }
+                }
+            }
+        }  
     }
 }

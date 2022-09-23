@@ -23,11 +23,6 @@
         }
     }
 }
-//COLOR MODS
-$bg-red: #c66;
-$bg-yellow: #fc6;
-$bg-green: #9c9;
-$bg-blue: #699;
 //BREAKPOINTS
 $x-large: 1300px;
 $large: 1300px;
@@ -36,7 +31,6 @@ $mobile: 580px;
 
 @media screen and (min-width: $x-large) {
     body{
-      background-color: $bg-blue;
       .heroWrapper{
         figure{
                 img{
@@ -46,18 +40,38 @@ $mobile: 580px;
     }
     }
   }
-@media screen and (max-width: $large) {
-    body{
-      background-color: $bg-red;
-    }
-  }
+// @media screen and (max-width: $large) {
+//     body{
+//     }
+//   }
 @media screen and (max-width: $tablet) {
   body{
-    background-color: $bg-yellow;     
+    .heroWrapper{
+      figure{
+          img{
+                  height: 30vh;
+              }
+          figcaption{
+              padding-top: 55%;
+          }
+      }
+  }   
   }
 }
 @media screen and (max-width: $mobile){
     body{
-    background-color: $bg-green;  
+    .heroWrapper{
+      figure{
+        display: grid;
+        grid-template-columns: 35% 65%;
+        padding-right: 5%;
+          img{
+                height: 15vh;
+              }
+          figcaption{
+              padding-top: 35%;
+          }
+      }
+  } 
     }
 }

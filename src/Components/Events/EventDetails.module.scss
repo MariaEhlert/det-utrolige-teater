@@ -95,15 +95,68 @@ $mobile: 580px;
 //     body{
 //     }
 //   }
-@media screen and (max-width: $large) {
-    body{
-    }
-  }
+// @media screen and (max-width: $large) {
+//     body{
+//     }
+//   }
 @media screen and (max-width: $tablet) {
-  body{    
+  body{   
+    .detailsWrapper{
+        figure{
+            figcaption{
+                .descriptionWrapper{
+                    p{
+                        font-size: 2vw;
+                    }
+                }
+            }
+        }
+        .actorsHeading{
+            padding-left: 2%;
+    
+        }
+        .actorsWrapper{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            figure{
+                figcaption{
+                    p{
+                        font-size: 2vw;
+                    }
+                }
+            }
+        }
+    }   
   }
 }
 @media screen and (max-width: $mobile){
     body{  
+        .detailsWrapper{
+            figure{
+                .imageWrapper{
+                    .likeWrapper{
+                        button{
+                            svg{
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+                }
+                figcaption{
+                    .buyTicket{
+                        margin-top: -2rem;
+                    }
+                    .descriptionWrapper{
+                        p{
+                            font-size: 2.5vw;
+                        }
+                    }
+                }
+            }
+            .actorsWrapper{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
     }
 }

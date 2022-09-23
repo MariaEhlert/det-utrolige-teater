@@ -108,15 +108,34 @@ $mobile: 580px;
 //     body{
 //     }
 //   }
-@media screen and (max-width: $large) {
-    body{
-    }
-  }
+// @media screen and (max-width: $large) {
+//     body{
+//     }
+//   }
 @media screen and (max-width: $tablet) {
-  body{    
+  body{  
+    form {
+        .userFormWrapper {
+            margin-top: -25%;
+            width: 35%;
+            padding-bottom: 10%;
+
+        }
+    
+    }   
   }
 }
 @media screen and (max-width: $mobile){
-    body{  
+    body{ 
+        form {
+            .userFormWrapper {
+                margin-right: 15%;
+                margin-top: 1%;
+                width: 70%;
+                p {
+                    text-align: center;
+                }
+            } 
+        } 
     }
 }

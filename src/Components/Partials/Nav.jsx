@@ -7,7 +7,7 @@ export const Nav = () => {
 	return (
 		<nav>
 			<ul className='topnav'>
-				<li><NavLink to='/home'>FORSIDE</NavLink></li>
+				<li><NavLink to='/'>FORSIDE</NavLink></li>
 				<li><NavLink to='/events'>FORESTILLINGER &#38; EVENTS</NavLink></li>
 				<li><NavLink to='/actors'>SKUESPILLERE</NavLink></li>
 				<li><NavLink to='/admin'>{loginData ? ('MIN SIDE') : ('LOGIN')}</NavLink></li>

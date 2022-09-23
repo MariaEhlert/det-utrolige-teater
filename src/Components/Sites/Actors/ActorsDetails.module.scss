@@ -38,15 +38,44 @@ $mobile: 580px;
 //     body{
 //     }
 //   }
-@media screen and (max-width: $large) {
-    body{
-    }
-  }
+// @media screen and (max-width: $large) {
+//     body{
+//     }
+//   }
 @media screen and (max-width: $tablet) {
-  body{    
+  body{ 
+    .actorDetailsWrapper{
+        article{
+            figure{
+                padding: 2% 4% 2% 2%;
+                figcaption{
+                    h3{
+                        font-size: 2.5vw;
+                    }
+                    p{
+                        font-size: 1.7vw;
+                    }
+                }
+            }
+        }
+    }   
   }
 }
 @media screen and (max-width: $mobile){
     body{  
+        .actorDetailsWrapper{
+            article{
+                padding-bottom: 7%;
+                figure{
+                    display: grid;
+                    grid-template-columns: 1fr ;
+                    figcaption{
+                        p{
+                            font-size: 2.5vw;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

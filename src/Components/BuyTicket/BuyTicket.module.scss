@@ -40,15 +40,53 @@ $mobile: 580px;
 //     body{
 //     }
 //   }
-@media screen and (max-width: $large) {
-    body{
-    }
-  }
+// @media screen and (max-width: $large) {
+//     body{
+//     }
+//   }
 @media screen and (max-width: $tablet) {
-  body{    
+  body{
+    .buyTicketWrapper{
+        .eventWrapper{
+            display: grid;
+            grid-template-columns: 60% 40%;
+            .eventImageWrapper{
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .eventInfoWrapper{
+                figcaption{
+                    h4{
+                        font-size: 1.6vw;
+                    }
+                }
+            }
+        }
+    }   
   }
 }
 @media screen and (max-width: $mobile){
-    body{  
+    body{ 
+        .buyTicketWrapper{
+            .eventWrapper{
+                display: grid;
+                grid-template-columns: 1fr;
+                .eventImageWrapper{
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .eventInfoWrapper{
+                    figcaption{
+                        h4{
+                            font-size: 2.5vw;
+                        }
+                    }
+                }
+            }
+        }   
     }
 }
