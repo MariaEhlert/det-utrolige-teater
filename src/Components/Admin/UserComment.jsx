@@ -5,6 +5,7 @@ import UserCommentIcon from '../../Assets/Image/Usercomments-icon.png'
 import DeleteIcon from '../../Assets/Image/Delete-icon.png'
 import EditIcon from '../../Assets/Image/Edit-icon.png'
 import { Link } from "react-router-dom";
+import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 
 export const UserCommentList = () => {
     // const {id} = useParams();
@@ -58,7 +59,7 @@ export const UserCommentList = () => {
                             <tr key={item.id}>
                                 <td>{item.event_title}, {item.stage_name}</td>
                                 <td>{item.comment}</td>
-                                <td>{item.num_stars}</td>
+                                <td><Rating num_stars={item.num_stars}/></td>
                                 <td className="imageTd">
                                     <Link to={`/admin/${item.id}`}><img src={EditIcon} alt="edit-icon" /></Link>
                                     <img onClick={() => deleteComment(item.id)} src={DeleteIcon} alt="delete-icon" />
@@ -69,5 +70,18 @@ export const UserCommentList = () => {
                 </tbody>
             </table>
         </article>
+    )
+}
+const Rating = (props) => {
+    const totalStars = 5;
+    const activeStars = (props.num_stars);
+    return(
+        <>
+        {[...new Array(totalStars)].map((item, index) => {
+            return (
+                index < activeStars ? <AiFillStar key={index}/> : <AiOutlineStar key={index}/>
+            ) 
+        })}
+        </>
     )
 }

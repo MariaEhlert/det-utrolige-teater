@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Moment from 'moment';
 import { useParams } from 'react-router-dom';
 import style from './EventComment.module.scss';
@@ -7,6 +7,7 @@ import CommentIcon from '../../Assets/Image/Comment-icon.png';
 import { useAuth } from '../Helpers/Auth/Auth';
 import { CommentLogin } from './CommentLogin';
 import { CommentPost } from './CommentPost';
+import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 
 
 
@@ -28,6 +29,7 @@ export const EventComment = () => {
         }
         getEventComment();
     }, [event_id])
+    
     return (
         <>
             <section className={style.commentWrapper}>
@@ -41,7 +43,7 @@ export const EventComment = () => {
                         const created = Moment(comment.created).format('DD.MM.YYYY')
                         return (
                             <article className={style.comments} key={comment.id}>
-                                <span>Antal stjerner: {comment.num_stars}</span>
+                                <Rating num_stars={comment.num_stars}/>
                                 <p>{created}</p>
                                 <h6>{comment.user.firstname} {comment.user.lastname}</h6>
                                 <p>{comment.comment}</p>
@@ -81,6 +83,19 @@ export const EventComment = () => {
                 }
 
             </section>
+        </>
+    )
+}
+const Rating = (props) => {
+    const totalStars = 5;
+    const activeStars = (props.num_stars);
+    return(
+        <>
+        {[...new Array(totalStars)].map((item, index) => {
+            return (
+                index < activeStars ? <AiFillStar key={index}/> : <AiOutlineStar key={index}/>
+            ) 
+        })}
         </>
     )
 }
