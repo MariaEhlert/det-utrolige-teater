@@ -10,6 +10,7 @@ export const EventsList = () => {
     const {event_id}= useParams(0);
     const [eventList, setEventList] = useState([]);
     useEffect(() => {
+        // henter lige med events i alfabetisk rækkefølge
         const getEventList = async () => {
             try {
                 const result = await axios.get('https://api.mediehuset.net/detutroligeteater/events?dir=ASC');
@@ -30,6 +31,7 @@ export const EventsList = () => {
             <h2 className="headline">Oversigt</h2>
             {eventList && eventList.map(events => {
                 return(
+                    // sender envets og evenet_id med som props
                     <EventItem key={events.id} data={events} event_id={event_id}/>
                     )
                 })}

@@ -8,6 +8,7 @@ import { useParams } from "react-router-dom";
 
 export const SearchResult = () => {
     const {event_id} = useParams();
+    // henter searchData indhold som er blevet sat i Search.jsx  med setSearchData 
     const { searchData } = useContext(SearchContext);
     const [ searchResult, setSearchResult ] = useState([]);
     useEffect(() => {
@@ -30,7 +31,7 @@ export const SearchResult = () => {
         <section className="eventListWrapper">
         {searchResult && searchResult.map(events => {
             return(
-                // <HomesListItem key={homes.id} data={homes} />
+                // sender data og event_id med som props
                 <EventItem key={events.id} data={events} event_id={event_id}/>
 
                 )

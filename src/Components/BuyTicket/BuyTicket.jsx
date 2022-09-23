@@ -13,6 +13,7 @@ export const BuyTicket = () => {
     const [eventDetails, setEventDetails] = useState();
     const { loginData } = useAuth()
     useEffect(() => {
+        //henter evnet detaljer
         const getEventDetails = async () => {
             try {
                 const result = await axios.get(`https://api.mediehuset.net/detutroligeteater/events/${event_id}`);
@@ -39,6 +40,8 @@ export const BuyTicket = () => {
         <Layout title='Køb billet' description='Køb billet'>
 
             <>
+                {/* conditional ternary operator */}
+                {/* hvis eventDetails er sat vises event data ellers vises loading besked*/}
                 {eventDetails && eventDetails ? (
                     <section className={style.buyTicketWrapper}>
                         <div className={style.eventWrapper}>
@@ -51,12 +54,15 @@ export const BuyTicket = () => {
                                     <hr />
                                     <h4>{eventDetails.title}</h4>
                                     <h3>{StartDate()} KL. {eventDetails.starttime}</h3>
-                                <h4 >BILLETPRIS: {new Intl.NumberFormat("da").format(eventDetails.price)} DKK</h4>
-                                <p>PRIS INKL. MOMS</p>
+                                    {/* omskriver til danske priser */}
+                                    <h4 >BILLETPRIS: {new Intl.NumberFormat("da").format(eventDetails.price)} DKK</h4>
+                                    <p>PRIS INKL. MOMS</p>
                                 </figcaption>
                             </article>
                         </div>
                         <article className={style.formWrapper}>
+                            {/* conditional ternary operator */}
+                            {/* hvis bruger er logget ind vises reservation form eller login besked */}
                             {loginData ? (
                                 <PostReservation event_id={eventDetails.id} />
                             ) : (

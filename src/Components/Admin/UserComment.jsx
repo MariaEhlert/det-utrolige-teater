@@ -5,14 +5,13 @@ import UserCommentIcon from '../../Assets/Image/Usercomments-icon.png'
 import DeleteIcon from '../../Assets/Image/Delete-icon.png'
 import EditIcon from '../../Assets/Image/Edit-icon.png'
 import { Link } from "react-router-dom";
-// import { useParams } from "react-router-dom";
-import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 
 export const UserCommentList = () => {
     // const {id} = useParams();
     const [userCommentList, setUserCommentList] = useState([]);
     const { loginData } = useAuth()
     useEffect(() => {
+        // henter bruger anmeldelser
         const getCommentData = async () => {
             try {
                 const result = await axios.get(`https://api.mediehuset.net/detutroligeteater/reviews`, { headers: authHeader() });
@@ -26,6 +25,7 @@ export const UserCommentList = () => {
         }
         getCommentData();
     }, [loginData.user_id])
+    // funktion til at slette anmeldelse
     const deleteComment = async (id) => {
         try {
             // bruger authHeader til at tjekke om sessionStorage eksisterer

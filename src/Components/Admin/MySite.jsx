@@ -1,5 +1,4 @@
 import { Layout } from '../Helpers/Layout/Layout';
-import { Login } from '../Sites/Login/Login';
 import './MySite.scss';
 import { UserCommentList } from './UserComment';
 import { UserFavoriteList } from './UserFarvoriteList';

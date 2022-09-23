@@ -7,7 +7,7 @@ export const myFetch = async (url, options = null) => {
     try{
         //hvis options er null skal den kun bruge url
         if(!options){
-            response = await fetch (url);
+            result = await fetch (url);
         //ellers skal den bruge både url og options
         }else{
             response = await fetch (url, options);

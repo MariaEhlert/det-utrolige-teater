@@ -17,9 +17,9 @@ const AuthProvider = ({children}) => {
     }, [children]);
     return(
         //Provider er en metode til at give alle children adgang til loginData (useState hook)
-        //alt der ligger i AuthContext giver adgang til loginData, setLoginData
+        //alle children som ligger i AuthContext får adgang til loginData, setLoginData
         //alt der ligger i appen har adgang til useState hook (loginData)
-        //vi bruger den til at 
+        //kan evt bruges til at tjekke om bruger er logget ind eller lave login form
         <AuthContext.Provider value={{loginData, setLoginData}}>
             {children}
         </AuthContext.Provider>

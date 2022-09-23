@@ -10,6 +10,7 @@ export const EventDetails = () => {
     const { event_id } = useParams();
     const [eventDetails, setEventDetails] = useState();
     useEffect(() => {
+        // henter evenet udfra event_id 
         const getEventDetails = async () => {
             try {
                 const result = await axios.get(`https://api.mediehuset.net/detutroligeteater/events/${event_id}`);
@@ -22,16 +23,6 @@ export const EventDetails = () => {
         }
         getEventDetails();
     }, [event_id])
-
-    // useEffect(() => {
-    //     const data = localStorage.getItem('event-data');
-    //     if(data){
-    //         setEventDetails(JSON.parse(data));
-    //     }
-    // }, [])
-    // useEffect(() => {
-    //     localStorage.setItem('event-data', JSON.stringify(eventDetails));
-    // })
     //Moment er en npm pakke
     // gør at datoen kommer ud som dag, månede og år
     const StartDate = () => {
@@ -59,6 +50,7 @@ export const EventDetails = () => {
                             <h6>{eventDetails.stage_name}</h6>
                             <div className={style.infoheadWrapper}>
                                 <h3 className={style.place}>{StartDate()} - {StopDate()}</h3>
+                                {/* omskriver til danske priser */}
                                 <h3 className={style.price}>BILLETPRIS: {new Intl.NumberFormat("da").format(eventDetails.price)} DKK</h3>
                             </div>
                             <hr></hr>
@@ -75,6 +67,7 @@ export const EventDetails = () => {
                     </figure>
                     <h3 className={style.actorsHeading}>MEDVIRKENDE</h3>
                     <article className={style.actorsWrapper}>
+                        {/* mapper over skuespillere */}
                         {eventDetails.actors && eventDetails.actors.map(item => {
                             return (
                                 <Link to={`/actors/${item.id}`} key={item.id}>
@@ -88,6 +81,7 @@ export const EventDetails = () => {
                             )
                         })}
                     </article>
+                    {/* sender evenet_id med som props */}
                     <EventComment event_id={event_id}/>
                 </section>
             ) :

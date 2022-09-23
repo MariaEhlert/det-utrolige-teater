@@ -1,5 +1,6 @@
 import Moment from 'moment';
 import { Link } from 'react-router-dom';
+// får data og props med som props 
 export const EventItem = props => {
     //Moment er en npm pakke
     // gør at datoen kommer ud som dag, månede og år

@@ -15,6 +15,7 @@ export const EventComment = () => {
     const { event_id } = useParams();
     const [eventComment, setEventComment] = useState([]);
     useEffect(() => {
+        //henter event anmeldelser
         const getEventComment = async () => {
             try {
                 const result = await axios.get(`https://api.mediehuset.net/detutroligeteater/reviews?event_id=${event_id}`);
@@ -35,6 +36,8 @@ export const EventComment = () => {
                     <h3>ANMELDELSER</h3>
                     <hr />
                     {eventComment && eventComment.map(comment => {
+                         //Moment er en npm pakke
+                        // gør at datoen kommer ud som dag, månede og år
                         const created = Moment(comment.created).format('DD.MM.YYYY')
                         return (
                             <article className={style.comments} key={comment.id}>
@@ -49,6 +52,8 @@ export const EventComment = () => {
                 </article>
             </section>
             <section className={style.postComment}>
+                {/* conditional ternary operator */}
+                {/* hvis ikke bruger er logget ind vises login form eller vises anmeldelse form */}
                 {!loginData ? (
                     <>
                         <article className={style.loginInfo}>
@@ -69,6 +74,7 @@ export const EventComment = () => {
                                     <p>Skriv en anmeldelse</p>
                                 </div>
                             </article>
+                            {/* sender evenet_id med som props */}
                             <CommentPost event_id={event_id}/>
                         </>
                     )

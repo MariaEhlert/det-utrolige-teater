@@ -3,11 +3,10 @@ import { useEffect, useState } from 'react';
 import './Hero.scss';
 import Moment from 'moment';
 
-// https://api.mediehuset.net/detutroligeteater/events?limit=3
-
 export const Hero = () => {
     const [heroData, setHeroData] = useState([]);
     useEffect(() => {
+        //henter event nummer 5
         const getHeroData = async () => {
             try {
                 const result = await axios.get('https://api.mediehuset.net/detutroligeteater/events/5');
@@ -26,8 +25,9 @@ export const Hero = () => {
     const stopDate = Moment(heroData.stopdate).format('DD-MM-YYYY')
     return (
         <article className='heroWrapper'>
+            {/* conditional ternary operator */}
+            {/* hvis heroData så vises eventet eller loading besked */}
             {heroData ? (
-
                 <figure>
                     <figcaption>
                         <p>{heroData.stage_name}</p>

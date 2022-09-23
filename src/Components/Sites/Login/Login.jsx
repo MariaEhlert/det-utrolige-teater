@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { useAuth } from "../../Helpers/Auth/Auth";
-import { myFetch } from "../../Helpers/Auth/Fetch";
+import { myFetch } from "../../Helpers/Auth/FetchAuth";
 import { Layout } from "../../Helpers/Layout/Layout";
 import { MySite } from "../../Admin/MySite";
 import style from './Login.module.scss';
@@ -21,6 +21,7 @@ export const Login = () => {
             body: formData
         }
         //fecth'er api endponit med url og options
+        //myFetch kommer fra FetchAuth 
         const result = await myFetch('https://api.mediehuset.net/token', options);
         handleSessionData(result);
     }

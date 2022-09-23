@@ -9,6 +9,7 @@ const [searchData, setSearchData] = useState('');
 
 return (
     //Provider er en metode til at give alle children adgang til searcData (useState hook)
+    //alle children som ligger i SearchContext får adgang til searchData, setSearchData
     <SearchContext.Provider value={{searchData, setSearchData}}>
         {children}
     </SearchContext.Provider>

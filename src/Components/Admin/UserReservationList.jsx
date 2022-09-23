@@ -7,6 +7,7 @@ import DeleteIcon from '../../Assets/Image/Delete-icon.png'
 export const UserReservationList = () => {
     const [reservationList, setReservationList] = useState([]);
     useEffect(() => {
+        // henter bruger reservationer
         const getReservationList = async () => {
             try {
                 const result = await axios.get('https://api.mediehuset.net/detutroligeteater/reservations', { headers: authHeader() });
@@ -38,6 +39,7 @@ export const UserReservationList = () => {
                 </thead>
                 <tbody>
                     {reservationList && reservationList.map(item => {
+                        // funktion til at slette reservation
                         const deleteFarvorite = async () => {
                             await axios.delete(`https://api.mediehuset.net/detutroligeteater/reservations/${item.id}`, { headers: authHeader() })
                             window.location.reload(false);

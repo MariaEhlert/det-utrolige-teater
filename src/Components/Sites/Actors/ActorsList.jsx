@@ -5,9 +5,9 @@ import { Layout } from "../../Helpers/Layout/Layout"
 import style from './Actors.module.scss';
 
 export const Actors = () => {
-    const { actor_id } = useParams(0);
     const [actorsList, setActorsList] = useState([]);
     useEffect(() => {
+        // henter alle skuespiller
         const getActorsList = async () => {
             try {
                 const result = await axios.get('https://api.mediehuset.net/detutroligeteater/actors');
@@ -32,6 +32,7 @@ export const Actors = () => {
                                 <img src={actor.image} alt={actor.name} />
                                 <figcaption>
                                     <h3>{actor.name}</h3>
+                                    {/* udksriver kun bogstaver fra 0 til 229 */}
                                     <p>{actor.description.slice(0, 229)}...</p>
                                 </figcaption>
                             </figure>
@@ -43,8 +44,6 @@ export const Actors = () => {
                     )
                 })}
             </section>
-
-
         </Layout>
     )
 }

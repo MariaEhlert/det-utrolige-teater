@@ -6,9 +6,10 @@ import { SearchContext } from "../Helpers/Auth/SearchAuth";
 export const SearchBar = () => {
     // useNavigate er et hook som hjælper at gå til den specifikke URL.
     const navigate = useNavigate();
+    // til at sætte data i setSearchData
     const { setSearchData } = useContext(SearchContext);
     const { register, handleSubmit } = useForm();
-    
+
     const getSearchResult = (data) => {
         setSearchData(data.searchItem);
         // navigerer til de andre routere ved hjælp af push eller replace-metoderne
@@ -16,6 +17,9 @@ export const SearchBar = () => {
     }
     return (
         <div className="searchWrapper">
+            {/* closer  */}
+            {/* en måde man sender en function videre */}
+            {/* getSearchResult lukker handleSubmit's funktion */}
             <form onSubmit={handleSubmit(getSearchResult)}>
                 <input
                     id="searchItem"

@@ -7,6 +7,7 @@ export const ActorsDetails = () => {
     const { actor_id } = useParams();
     const [actorDetails, setActorDetails] = useState();
     useEffect(() => {
+        // henter skuespiller ud fra id
         const getActorDetails = async () => {
             try {
                 const result = await axios.get(`https://api.mediehuset.net/detutroligeteater/actors/${actor_id}`);

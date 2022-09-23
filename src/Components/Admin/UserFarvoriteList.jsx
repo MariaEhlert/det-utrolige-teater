@@ -7,6 +7,7 @@ import DeleteIcon from '../../Assets/Image/Delete-icon.png'
 export const UserFavoriteList = () => {
     const [farvoritesList, setFarvoritesList] = useState([]);
     useEffect(() => {
+        // henter brugers Favoritter
         const getFarvoriteData = async () => {
             try {
                 const result = await axios.get('https://api.mediehuset.net/detutroligeteater/favorites', { headers: authHeader() });
@@ -34,6 +35,7 @@ export const UserFavoriteList = () => {
                 </thead>
                 <tbody>
                     {farvoritesList && farvoritesList.map(item => {
+                        // funktion til at slette favorit
                         const deleteFarvorite = async () => {
                             await axios.delete(`https://api.mediehuset.net/detutroligeteater/favorites/${item.event_id}`, { headers: authHeader() })
                             window.location.reload(false);
