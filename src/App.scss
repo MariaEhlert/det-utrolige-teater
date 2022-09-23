@@ -85,12 +85,6 @@ body {
     cursor: pointer;
 }
 
-
-//COLOR MODS
-$bg-red: #c66;
-$bg-yellow: rgba(255, 204, 102, 0.346);
-$bg-green: #9c9;
-$bg-blue: #699;
 //BREAKPOINTS
 $x-large: 1300px;
 $large: 1300px;
@@ -99,7 +93,6 @@ $mobile: 580px;
 
 @media screen and (min-width: $x-large) {
     body {
-        background-color: $bg-blue;
         main {
             padding-top: 7%;
             h1 {
@@ -123,12 +116,10 @@ $mobile: 580px;
 
 // @media screen and (max-width: $large) {
 //     body{
-//       background-color: $bg-red;
 //     }
 //   }
 @media screen and (max-width: $tablet) {
     body {
-        background-color: $bg-yellow;
         padding-left: 5%;
         padding-right: 5%;
         main {
@@ -154,31 +145,24 @@ $mobile: 580px;
 
 @media screen and (max-width: $mobile) {
     body {
-        background-color: $bg-green;
+        padding-right: 5%;
+        main {
+            padding-top: 7%;
+            h1 {
+                font-size: 3.7vw;
+            }
+            h2 {
+                font-size: 4.5vw;
+            }
+            h3 {
+                font-size: 2.5vw;
+            }
+            h6 {
+                font-size: 2vw;
+            }
+            p {
+                font-size: 2vw;
+            }
+        }
     }
-}
-
-
-
-
-//BREAKPOINTS
-$x-large: 1300px;
-$large: 1300px;
-$tablet: 980px;
-$mobile: 580px;
-
-@media screen and (min-width: $x-large) {
-    body {}
-}
-
-@media screen and (max-width: $large) {
-    body {}
-}
-
-@media screen and (max-width: $tablet) {
-    body {}
-}
-
-@media screen and (max-width: $mobile) {
-    body {}
 }
